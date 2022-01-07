@@ -1,12 +1,16 @@
-import React from "react";
-import './App.css';
-
+import Footer from './components/Footer';
+import FormUno from './components/FormUno';
+import NavbarUno from './components/NavbarUno';
+import Sidebar from './components/Sidebar';
 function App() {
   return (
-
-     <div className="App">
-      <header className="App-header">
-      </header>
+    <div className="App">
+      <NavbarUno />
+      <div className="row">
+        <Sidebar />
+      </div>
+      <FormUno />
+      <Footer />
     </div>
   );
 }

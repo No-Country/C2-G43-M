@@ -1,0 +1,10 @@
+.sidebar {
+  margin-top: 56px;
+  background-color: gray;
+  color: blue;
+  text-align: center;
+  width: 100%;
+}
+.sidebar a {
+  color: blue;
+}
