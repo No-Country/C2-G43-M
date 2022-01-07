@@ -6,5 +6,5 @@ Grupo 43-m,Proyecto Dashboard
 <li>Ale Piñeiro</li>
 <li>Horacio Brunaccio</li>
 <li>Kevin Torres</li>
-<li></li>
-<li></li>
+<li> </li>
+<li> </li>
