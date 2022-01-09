@@ -1,15 +1,12 @@
 import React from "react";
-import './App.scss';
-import Navbar from './components/containers/Navbar.jsx'
-import Footer from "./components/Footer/Footer";
+//import "./App.scss";
+//import Sidebar from "./components/sidebar/Sidebar";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-
     <div className="App">
-        <Navbar />
-        <h1>hello world</h1>
-        <Footer />
+      <Layout />
     </div>
   );
 }
