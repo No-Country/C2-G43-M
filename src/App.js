@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
+import CardContainer from './components/CardContainer';
+//import BarChart from './components/BarChart';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-
-     <div className="App">
-      <header className="App-header">
-      </header>
+    <div className="App">
+      <CardContainer />
     </div>
   );
-}
+};
 
 export default App;

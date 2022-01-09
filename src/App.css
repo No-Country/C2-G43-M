@@ -1,0 +1,15 @@
+.App {
+  width: 800px;
+  margin-top: 150px;
+  margin-left: 500px;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: end;
+  align-items: center;
+  justify-content: center;
+}
+.line {
+  height: 400px;
+  width: 600px;
+}
