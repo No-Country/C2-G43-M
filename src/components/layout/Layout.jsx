@@ -1,16 +1,16 @@
 import React from "react";
-
-import Sidebar from "../sidebar/Sidebar";
-
+import Sidebar from "../../components/sidebar/Sidebar";
+import "./layout.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Dashboard from "../../pages/Dashboard";
 import Customers from "../../pages/Customers";
 
-const Layout = () => {
+const Layout = ({ props }) => {
   return (
     <BrowserRouter>
       <div className="layout__content">
+        <Sidebar {...props} />
         <div className="layout__content-main">
           <Routes>
             <Route path="/customers" element={<Customers />} />
