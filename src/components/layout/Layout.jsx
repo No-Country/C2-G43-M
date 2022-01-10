@@ -11,9 +11,9 @@ const Layout = ({ props }) => {
   return (
     <BrowserRouter>
       <div className="layout">
-        <Sidebar {...props} />
+        <TopNav />
         <div className="layout__content">
-          <TopNav />
+          <Sidebar {...props} />
           <div className="layout__content-main">
             <Routes>
               <Route path="/customers" element={<Customers />} />
