@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 //import { Chart } from 'chart.js';
-import { Radar, Bar, defaults, Line, Pie } from 'react-chartjs-2';
+import { Radar, Bar, defaults, Line, Pie, Bubble } from 'react-chartjs-2';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {} from '../assets/css/dashboard.css';
 import {
   TabContent,
   TabPane,
@@ -37,7 +38,7 @@ function CardContainer() {
 
   return (
     <div //ESTILOS DEL CONTENEDOR DE LOS GRAFICOS
-      className="border border-dark"
+      className="dashboard border border-dark"
       style={{
         display: 'block',
         width: 700,
@@ -96,6 +97,18 @@ function CardContainer() {
             Radar
           </NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({
+              active: currentActiveTab === '5',
+            })}
+            onClick={() => {
+              toggle('5');
+            }}
+          >
+            Burbuja
+          </NavLink>
+        </NavItem>
       </Nav>
       {/*COMIENZO DE GRAFICO DE BARRAS */}
       <TabContent activeTab={currentActiveTab} className="border border-dark">
@@ -117,7 +130,7 @@ function CardContainer() {
                       ],
                       datasets: [
                         {
-                          label: 'Número de ventas',
+                          label: 'N° de ventas',
                           fill: true /*
                           //backgroundColor: 'gradientStroke',
                           borderColor: '#1f8ef1',
@@ -142,6 +155,19 @@ function CardContainer() {
                             'rgb(6, 255, 0)',
                             'rgb(154, 6, 128)',
                             'rgb(255, 142, 0)',
+                          ],
+                        },
+                        {
+                          //segunda linea
+                          label: '% de ventas',
+                          data: [22, 29, 13, 55, 22, 13],
+                          backgroundColor: [
+                            'rgba(55, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(55, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(53, 102, 255, 0.2)',
+                            'rgba(55, 159, 64, 0.2)',
                           ],
                         },
                       ],
@@ -199,7 +225,7 @@ function CardContainer() {
                     ],
                     datasets: [
                       {
-                        label: 'Número de ventas',
+                        label: 'N° de ventas',
                         data: [12, 19, 3, 5, 2, 3],
                         backgroundColor: [
                           'rgba(255, 99, 132, 0.2)',
@@ -222,7 +248,7 @@ function CardContainer() {
                       },
                       {
                         //segunda linea
-                        label: 'porcentaje de ventas',
+                        label: '% de ventas',
                         data: [22, 29, 13, 55, 22, 13],
                         backgroundColor: [
                           'rgba(55, 99, 132, 0.2)',
@@ -277,7 +303,7 @@ function CardContainer() {
                       ],
                       datasets: [
                         {
-                          label: 'Número de ventas',
+                          label: 'N° de ventas',
                           data: [12, 19, 3, 5, 2, 3],
                           backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -343,7 +369,7 @@ function CardContainer() {
                       ],
                       datasets: [
                         {
-                          label: 'Número de ventas',
+                          label: 'N° de ventas',
                           data: [12, 19, 3, 5, 2, 3],
                           backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -366,7 +392,7 @@ function CardContainer() {
                         },
                         {
                           //segunda linea
-                          label: 'porcentaje de ventas',
+                          label: '% de ventas',
                           data: [22, 29, 13, 55, 22, 13],
                           backgroundColor: [
                             'rgba(55, 99, 132, 0.2)',
@@ -401,6 +427,76 @@ function CardContainer() {
                           loop: true,
                         },*/
                       },
+                      maintainAspectRatio: false,
+                      scales: {
+                        yAxes: [
+                          {
+                            ticks: {
+                              beginAtZero: true,
+                            },
+                          },
+                        ],
+                      },
+                      legend: {
+                        labels: {
+                          fontSize: 25,
+                        },
+                      },
+                    }}
+                  />
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </TabPane>
+        {/*COMIENZO GRAFICO BURBUJA */}
+        <TabPane tabId="5">
+          <Row>
+            <Col sm="12">
+              <div>
+                <div className="line">
+                  <Bubble
+                    data={{
+                      labels: [
+                        'Red',
+                        'Blue',
+                        'Yellow',
+                        'Green',
+                        'Purple',
+                        'Orange',
+                      ],
+                      datasets: [
+                        {
+                          label: 'N° de ventas',
+                          data: [
+                            {
+                              x: 20,
+                              y: 30,
+                              r: 15,
+                            },
+                            {
+                              x: 40,
+                              y: 10,
+                              r: 10,
+                            },
+                            {
+                              x: 29,
+                              y: 20,
+                              r: 15,
+                            },
+                            {
+                              x: 50,
+                              y: 20,
+                              r: 10,
+                            },
+                          ],
+                          backgroundColor: 'rgb(255, 23, 0)',
+                        },
+                      ],
+                    }}
+                    height={400}
+                    width={636}
+                    options={{
                       maintainAspectRatio: false,
                       scales: {
                         yAxes: [

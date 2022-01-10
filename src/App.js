@@ -1,7 +1,7 @@
 import React from 'react';
 import CardContainer from './components/CardContainer';
 //import BarChart from './components/BarChart';
-import './App.css';
+//import './App.css';
 
 const App = () => {
   return (
