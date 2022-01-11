@@ -1,7 +1,7 @@
 .dashboard {
   width: 800px;
   margin-top: 150px;
-  margin-left: 500px;
+  margin-left: 400px;
   margin-right: auto;
   display: flex;
   flex-direction: end;
@@ -22,7 +22,7 @@
 
 .line {
   height: 400px;
-  width: 600px;
+  width: 750px;
 }
 h4 {
   color: gray;

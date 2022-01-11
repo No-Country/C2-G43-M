@@ -41,7 +41,7 @@ function Dashboard() {
       className="dashboard  "
       style={{
         display: 'block',
-        width: 700,
+        width: 800,
         padding: 30,
         background: '',
         //para caMbiar el color
