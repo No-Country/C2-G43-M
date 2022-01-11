@@ -475,19 +475,19 @@ function CardContainer() {
                               r: 15,
                             },
                             {
-                              x: 40,
+                              x: 400,
                               y: 10,
                               r: 10,
                             },
                             {
-                              x: 29,
+                              x: 30,
                               y: 20,
                               r: 15,
                             },
                             {
-                              x: 50,
+                              x: 290,
                               y: 20,
-                              r: 10,
+                              r: 30,
                             },
                           ],
                           backgroundColor: 'rgb(255, 23, 0)',
