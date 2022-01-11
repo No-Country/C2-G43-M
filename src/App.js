@@ -1,12 +1,13 @@
 import React from 'react';
-import CardContainer from './components/CardContainer';
+
+import Dashboard from './components/Dashboard';
 //import BarChart from './components/BarChart';
 //import './App.css';
 
 const App = () => {
   return (
     <div className="App">
-      <CardContainer />
+      <Dashboard />
     </div>
   );
 };

@@ -15,7 +15,7 @@ import {
 import classnames from 'classnames';
 defaults.global.legend.position = 'top'; //para que la decripcion este arriba,sino bottom
 
-function CardContainer() {
+function Dashboard() {
   // State for current active Tab
   const [currentActiveTab, setCurrentActiveTab] = useState('1');
 
@@ -38,18 +38,19 @@ function CardContainer() {
 
   return (
     <div //ESTILOS DEL CONTENEDOR DE LOS GRAFICOS
-      className="dashboard border border-dark"
+      className="dashboard  "
       style={{
         display: 'block',
         width: 700,
         padding: 30,
-        background: '', //para caMbiar el color
+        background: '',
+        //para caMbiar el color
       }}
     >
-      <h4>Graficos</h4>
+      <h4>Total de ventas</h4>
 
-      <Nav tabs>
-        <NavItem>
+      <Nav tabs className="tabs">
+        <NavItem className="tabitem">
           <NavLink
             className={classnames({
               active: currentActiveTab === '1',
@@ -111,7 +112,7 @@ function CardContainer() {
         </NavItem>
       </Nav>
       {/*COMIENZO DE GRAFICO DE BARRAS */}
-      <TabContent activeTab={currentActiveTab} className="border border-dark">
+      <TabContent activeTab={currentActiveTab} className=" border border-dark">
         <TabPane tabId="1">
           <Row>
             <Col sm="12">
@@ -413,7 +414,7 @@ function CardContainer() {
                         backgroundColor: {
                           type: 'color',
                           duration: 1000,
-                          easing: 'linear',
+                          easing: 'easeOutQuad',
                           to: 'red',
                           from: 'blue',
                           loop: true,
@@ -524,4 +525,4 @@ function CardContainer() {
   );
 }
 
-export default CardContainer;
+export default Dashboard;
