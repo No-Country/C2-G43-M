@@ -29,7 +29,7 @@ function Dashboard() {
       let ctx = canvas.getContext('2d');
       //funciones gradient
       const gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
-
+      //colores opcionales para agregar
       gradientStroke.addColorStop(1, 'rgba(29,140,248,0.2)');
       gradientStroke.addColorStop(0.4, 'rgba(29,140,248,0.0)');
       gradientStroke.addColorStop(0, 'rgba(29,140,248,0)'); //blue colors
