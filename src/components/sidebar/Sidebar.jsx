@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-import './sidebar.css'
+import "./sidebar.css";
 
-import logo from '../../assets/images/favicon.png'
-import SidebarItem from './SidebarItem'
-import sidebar_items from '../../assets/JsonData/sidebar_routes.json'
+import logo from "../../assets/images/favicon.png";
+import SidebarItem from "./SidebarItem";
+import sidebar_items from "../../assets/JsonData/sidebar_routes.json";
 
 /*const SidebarItem = props => {
 
@@ -24,28 +24,27 @@ import sidebar_items from '../../assets/JsonData/sidebar_routes.json'
     )
 }*/
 
-const Sidebar = props => {
+const Sidebar = (props) => {
+  const activeItem = sidebar_items.findIndex(
+    (item) => item.route === window.location.pathname
+  );
 
-    const activeItem = sidebar_items.findIndex(item => item.route === window.location.pathname)
+  return (
+    <div className="sidebar">
+      <div className="sidebar__logo">
+        <img src={logo} alt="company logo" />
+      </div>
+      {sidebar_items.map((item, index) => (
+        <Link to={item.route} key={index}>
+          <SidebarItem
+            title={item.display_name}
+            icon={item.icon}
+            active={index === activeItem}
+          />
+        </Link>
+      ))}
+    </div>
+  );
+};
 
-    return (
-        <div className='sidebar'>
-            <div className="sidebar__logo">
-                <img src={logo} alt="company logo" />
-            </div>
-            {
-                sidebar_items.map((item, index) => (
-                    <Link to={item.route} key={index}>
-                        <SidebarItem
-                            title={item.display_name}
-                            icon={item.icon}
-                            active={index === activeItem}
-                        />
-                    </Link>
-                ))
-            }
-        </div>
-    )
-}
-
-export default Sidebar
+export default Sidebar;
