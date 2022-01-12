@@ -1,0 +1,45 @@
+.dashboard {
+  width: 800px;
+  margin-top: 10px;
+  margin-left: 4px;
+  margin-right: auto;
+  display: flex;
+  flex-direction: end;
+  align-items: center;
+  justify-content: center;
+  border-color: #0070f3;
+  border: 1px solid #eaeaea;
+  border-radius: 2%;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.dashboard:hover {
+  border-radius: 15px;
+  border-width: 4px;
+
+  border-style: solid;
+  border-image: linear-gradient(to right, rgb(75, 75, 170), darkorchid) 1;
+}
+
+.line {
+  height: 400px;
+  width: 900px;
+}
+h4 {
+  color: gray;
+  font-family: serif;
+}
+h4:hover {
+  color: #0070f3;
+  font-size: 27px;
+}
+.tabs {
+}
+.tabs a {
+  color: black;
+  font-weight: bold;
+}
+.tabitem {
+}
+.tabsitem:hover {
+  background-color: aqua;
+}
