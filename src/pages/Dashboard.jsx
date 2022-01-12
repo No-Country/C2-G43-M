@@ -49,7 +49,7 @@ const Dashboard = () => {
     <div>
       <h2 className="page-header">Dashboard</h2>
       <div //ESTILOS DEL CONTENEDOR DE LOS GRAFICOS
-        className="dashboard  "
+        className="dashboard "
         style={{
           display: 'block',
           width: 950,

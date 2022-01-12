@@ -11,11 +11,11 @@
   border: 1px solid #eaeaea;
   border-radius: 2%;
   transition: color 0.15s ease, border-color 0.15s ease;
+  margin-bottom: 25px;
 }
 .dashboard:hover {
   border-radius: 15px;
   border-width: 4px;
-
   border-style: solid;
   border-image: linear-gradient(to right, rgb(75, 75, 170), darkorchid) 1;
 }
@@ -35,7 +35,7 @@ h4:hover {
 .tabs {
 }
 .tabs a {
-  color: black;
+  color: gray;
   font-weight: bold;
 }
 .tabitem {
