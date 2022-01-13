@@ -53,3 +53,6 @@
   );
   color: var(--txt-white);
 }
+a:link {
+  text-decoration: none;
+}
