@@ -31,7 +31,7 @@ const renderBody = (item, index) => (
 const Customers = () => {
   return (
     <div>
-      <h2 className="page-header">customers</h2>
+      <h2 className="page-header">Clientes</h2>
       <div className="row">
         <div className="col-12">
           <div className="card">

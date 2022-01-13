@@ -84,7 +84,7 @@ const Topnav = () => {
             badge="12"
             contentData={notifications}
             renderItems={(item, index) => renderNotificationItem(item, index)}
-            renderFooter={() => <Link to="/">View All</Link>}
+            renderFooter={() => <Link to="/">Ver más</Link>}
           />
         </div>
         <div className="topnav__right-item">

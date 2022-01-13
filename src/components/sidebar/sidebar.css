@@ -1,11 +1,24 @@
 .sidebar {
-    min-width: var(--sidebar-width);
+    overflow: hidden;
+    overflow-y: scroll;
+    min-width: 80px;
+    max-width: 80px;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
     background-color: var(--main-bg);
     box-shadow: var(--box-shadow);
+    transition: 1.2s;
+    scrollbar-width: none;
+}
+.sidebar::-webkit-scrollbar{
+    display: none;
+}
+
+.sidebar:hover {
+    min-width: 14vw;
+    max-width: 14vw;
 }
 
 .sidebar__logo {

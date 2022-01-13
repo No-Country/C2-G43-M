@@ -1,22 +1,22 @@
 [
     {
         "icon": "bx bx-error",
-        "content": "Curabitur id eros quis nunc suscipit blandit"
+        "content": "Tienes 5 nuevo mensajes"
     },
     {
         "icon": "bx bx-package",
-        "content": "Duis malesuada justo eu sapien elementum, in semper diam posuere"
+        "content": "50 Nuevos Clientes esta semana"
     },
     {
         "icon": "bx bx-cart",
-        "content": "Donec at nisi sit amet tortor commodo porttitor pretium a erat"
+        "content": "Las tasas de interes continuan estables"
     },
     {
         "icon": "bx bx-error",
-        "content": "In gravida mauris et nisi"
+        "content": "1 tramite pendiente de confirmación"
     },
     {
         "icon": "bx bx-cart",
-        "content": "Curabitur id eros quis nunc suscipit blandit"
+        "content": "Hay nuevos datos para visualizar"
     }
 ]

@@ -24,31 +24,31 @@ const mode_settings = [
 const color_settings = [
   {
     id: "blue",
-    name: "Blue",
+    name: "Azul",
     background: "blue-color",
     class: "theme-color-blue",
   },
   {
     id: "red",
-    name: "Red",
+    name: "Rojo",
     background: "red-color",
     class: "theme-color-red",
   },
   {
     id: "cyan",
-    name: "Cyan",
+    name: "Cian",
     background: "cyan-color",
     class: "theme-color-cyan",
   },
   {
     id: "green",
-    name: "Green",
+    name: "Verde",
     background: "green-color",
     class: "theme-color-green",
   },
   {
     id: "orange",
-    name: "Orange",
+    name: "Naranja",
     background: "orange-color",
     class: "theme-color-orange",
   },

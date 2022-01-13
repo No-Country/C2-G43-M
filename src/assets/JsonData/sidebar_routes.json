@@ -5,17 +5,17 @@
         "icon": "bx bx-category-alt"
     },
     {
-        "display_name": "Customers",
+        "display_name": "Clientes",
         "route": "/customers",
         "icon": "bx bx-user-pin"
     },
     {
-        "display_name": "Products",
+        "display_name": "Productos",
         "route": "/products",
         "icon": "bx bx-package"
     },
     {
-        "display_name": "Orders",
+        "display_name": "Ordenes",
         "route": "/orders",
         "icon": "bx bx-cart"
     },
@@ -25,22 +25,22 @@
         "icon": "bx bx-bar-chart-alt"
     },
     {
-        "display_name": "categories",
+        "display_name": "categorias",
         "route": "/categories",
         "icon": "bx bx-list-ol"
     },
     {
-        "display_name": "discount",
+        "display_name": "Descuentos",
         "route": "/discount",
         "icon": "bx bx-gift"
     },
     {
-        "display_name": "inventory",
+        "display_name": "inventorio",
         "route": "/inventory",
         "icon": "bx bx-store-alt"
     },
     {
-        "display_name": "settings",
+        "display_name": "Configuración",
         "route": "/settings",
         "icon": "bx bx-cog"
     }
