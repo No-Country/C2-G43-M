@@ -10,6 +10,7 @@ import ThemeAction from "../../redux/actions/ThemeAction";
 
 import Dashboard from "../../pages/Dashboard";
 import Customers from "../../pages/Customers";
+import Employees from "../../pages/Employees";
 
 const Layout = ({ props }) => {
   const ThemeReducer = useSelector((state) => state.ThemeReducer);
@@ -36,6 +37,7 @@ const Layout = ({ props }) => {
             <Routes>
               <Route path="/customers" element={<Customers />} />
               <Route exact path="/" element={<Dashboard />} />
+              <Route path="/employees" element={<Employees />}/>
             </Routes>
           </div>
         </div>

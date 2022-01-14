@@ -19,7 +19,7 @@ import { useSelector, useDispatch } from "react-redux";
 import ThemeAction from "../../redux/actions/ThemeAction";
 
 const curr_user = {
-  display_name: "User name",
+  display_name: "Usuario",
   image: user_image,
 };
 
@@ -61,13 +61,12 @@ const Topnav = () => {
     dispatch(ThemeAction.setMode(themeClass));
 
     dispatch(ThemeAction.setColor(colorClass));
-    console.log("holis");
   }, [dispatch]);
 
   return (
     <div className={`topnav ${ThemeReducer.mode} ${ThemeReducer.color}`}>
       <div className="topnav__search">
-        <input type="text" placeholder="Search here..." />
+        <input type="text" placeholder="Buscar" />
         <i className="bx bx-search"></i>
       </div>
       <div className="topnav__right">

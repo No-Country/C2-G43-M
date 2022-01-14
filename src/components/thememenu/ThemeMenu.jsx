@@ -120,12 +120,12 @@ const ThemeMenu = () => {
         <i className="bx bx-palette"></i>
       </button>
       <div ref={menu_ref} className="theme-menu">
-        <h4>Theme settings</h4>
+        <h4>Personalizar</h4>
         <button className="theme-menu__close" onClick={() => closeMenu()}>
           <i className="bx bx-x"></i>
         </button>
         <div className="theme-menu__select">
-          <span>Choose mode</span>
+          <span>Modo Oscuro</span>
           <ul className="mode-list">
             {mode_settings.map((item, index) => (
               <li key={index} onClick={() => setMode(item)}>
@@ -142,7 +142,7 @@ const ThemeMenu = () => {
           </ul>
         </div>
         <div className="theme-menu__select">
-          <span>Choose color</span>
+          <span>Cambiar color</span>
           <ul className="mode-list">
             {color_settings.map((item, index) => (
               <li key={index} onClick={() => setColor(item)}>

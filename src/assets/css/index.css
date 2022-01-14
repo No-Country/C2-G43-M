@@ -55,12 +55,12 @@ body {
 }
 
 a {
-    text-decoration: none;
-    color: unset;
+    text-decoration: none !important;
+    color: unset !important;
 }
 
 a:hover {
-    color: var(--main-color);
+    color: var(--main-color) !important;
 }
 
 button {

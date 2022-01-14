@@ -28,7 +28,7 @@ const renderBody = (item, index) => (
   </tr>
 );
 
-const Customers = () => {
+const Employees = () => {
   return (
     <div>
       <h2 className="page-header">Clientes</h2>
@@ -51,4 +51,4 @@ const Customers = () => {
   );
 };
 
-export default Customers;
+export default Employees;
