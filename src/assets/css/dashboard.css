@@ -32,13 +32,10 @@ h4:hover {
   color: #0070f3;
   font-size: 27px;
 }
-.tabs {
-}
+
 .tabs a {
   color: gray;
   font-weight: bold;
-}
-.tabitem {
 }
 .tabsitem:hover {
   background-color: aqua;

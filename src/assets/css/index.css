@@ -55,21 +55,12 @@ body {
 }
 
 a {
-<<<<<<< HEAD
-    text-decoration: none !important;
-    color: unset !important;
-}
-
-a:hover {
-    color: var(--main-color) !important;
-=======
   text-decoration: none;
   color: unset;
 }
 
 a:hover {
   color: var(--main-color);
->>>>>>> components
 }
 
 button {
