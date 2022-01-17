@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
-//import logo from "../../assets/images/favicon.png";
+import logo from "../../assets/images/favicon.png";
 import "./dropdown.css";
 
 const clickOutsideRef = (content_ref, toggle_ref) => {
   document.addEventListener("mousedown", (e) => {
+    // user click toggle
     if (toggle_ref.current && toggle_ref.current.contains(e.target)) {
       content_ref.current.classList.toggle("active");
     } else {
