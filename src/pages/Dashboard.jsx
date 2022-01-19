@@ -1,9 +1,19 @@
 //import { useSelector } from "react-redux";
 
+<<<<<<< HEAD
 import StatusCard from "../components/status-card/StatusCard";
 import {} from "../assets/css/dashboard.css";
 import React, { useState } from "react";
 import { Radar, Bar, defaults, Line, Pie, Bubble } from "react-chartjs-2";
+=======
+import StatusCard from '../components/status-card/StatusCard';
+import BarChart from '../components/barchart/BarChart';
+import PieChart from '../components/piechart/PieChart';
+
+import {} from '../assets/css/dashboard.css';
+import React, { useState } from 'react';
+import { Radar, Bar, defaults, Line, Pie, Bubble } from 'react-chartjs-2';
+>>>>>>> c8143c67f79e73e8095c0e7f42b488694df9790a
 import {
   TabContent,
   TabPane,
@@ -17,7 +27,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import classnames from "classnames";
 import statusCards from "../assets/JsonData/status-card-data.json";
 
+<<<<<<< HEAD
 defaults.global.legend.position = "top"; //para que la decripcion este arriba,sino bottom
+=======
+defaults.global.legend.position = 'top'; //para que la decripcion este arriba,sino bottom
+>>>>>>> c8143c67f79e73e8095c0e7f42b488694df9790a
 
 //**************************************************
 /*   Las tarjetas del Dashboard consumen datos
