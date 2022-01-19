@@ -1,5 +1,5 @@
 //import { useSelector } from "react-redux";
-
+import Crud from '../components/crud/Crud';
 import StatusCard from '../components/status-card/StatusCard';
 import {} from '../assets/css/dashboard.css';
 import React, { useState } from 'react';
@@ -557,6 +557,7 @@ const Dashboard = () => {
               </div>
             ))}
           </div>
+          <Crud />
         </div>
       </div>
     </div>
