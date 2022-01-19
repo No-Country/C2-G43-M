@@ -55,15 +55,12 @@ body {
 }
 
 a {
-<<<<<<< HEAD
-=======
   text-decoration: none !important;
   color: unset !important;
 }
 
 a:hover {
   color: var(--main-color) !important;
->>>>>>> c8143c67f79e73e8095c0e7f42b488694df9790a
   text-decoration: none;
   color: unset;
 }

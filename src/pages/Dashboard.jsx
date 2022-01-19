@@ -1,19 +1,15 @@
 //import { useSelector } from "react-redux";
 
-<<<<<<< HEAD
-import StatusCard from "../components/status-card/StatusCard";
-import {} from "../assets/css/dashboard.css";
-import React, { useState } from "react";
-import { Radar, Bar, defaults, Line, Pie, Bubble } from "react-chartjs-2";
-=======
 import StatusCard from '../components/status-card/StatusCard';
+import {} from '../assets/css/dashboard.css';
+import React, { useState } from 'react';
+import { Radar, Bar, defaults, Line, Pie, Bubble } from 'react-chartjs-2';
+
 import BarChart from '../components/barchart/BarChart';
 import PieChart from '../components/piechart/PieChart';
 
 import {} from '../assets/css/dashboard.css';
-import React, { useState } from 'react';
-import { Radar, Bar, defaults, Line, Pie, Bubble } from 'react-chartjs-2';
->>>>>>> c8143c67f79e73e8095c0e7f42b488694df9790a
+
 import {
   TabContent,
   TabPane,
@@ -22,16 +18,12 @@ import {
   NavLink,
   Row,
   Col,
-} from "reactstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import classnames from "classnames";
-import statusCards from "../assets/JsonData/status-card-data.json";
+} from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import classnames from 'classnames';
+import statusCards from '../assets/JsonData/status-card-data.json';
 
-<<<<<<< HEAD
-defaults.global.legend.position = "top"; //para que la decripcion este arriba,sino bottom
-=======
 defaults.global.legend.position = 'top'; //para que la decripcion este arriba,sino bottom
->>>>>>> c8143c67f79e73e8095c0e7f42b488694df9790a
 
 //**************************************************
 /*   Las tarjetas del Dashboard consumen datos
@@ -41,7 +33,7 @@ defaults.global.legend.position = 'top'; //para que la decripcion este arriba,si
 const Dashboard = () => {
   //const themeReducer = useSelector((state) => state.ThemeReducer.mode);
   // State for current active Tab
-  const [currentActiveTab, setCurrentActiveTab] = useState("1");
+  const [currentActiveTab, setCurrentActiveTab] = useState('1');
 
   // Toggle active state for Tab
   const toggle = (tab) => {
@@ -65,10 +57,10 @@ const Dashboard = () => {
       <div //ESTILOS DEL CONTENEDOR DE LOS GRAFICOS
         className="dashboard "
         style={{
-          display: "block",
+          display: 'block',
           width: 950,
           padding: 30,
-          background: "",
+          background: '',
           //para caMbiar el color
         }}
       >
@@ -78,10 +70,10 @@ const Dashboard = () => {
           <NavItem className="tabitem">
             <NavLink
               className={classnames({
-                active: currentActiveTab === "1",
+                active: currentActiveTab === '1',
               })}
               onClick={() => {
-                toggle("1");
+                toggle('1');
               }}
             >
               Barras
@@ -90,10 +82,10 @@ const Dashboard = () => {
           <NavItem>
             <NavLink
               className={classnames({
-                active: currentActiveTab === "2",
+                active: currentActiveTab === '2',
               })}
               onClick={() => {
-                toggle("2");
+                toggle('2');
               }}
             >
               Lineas
@@ -102,10 +94,10 @@ const Dashboard = () => {
           <NavItem>
             <NavLink
               className={classnames({
-                active: currentActiveTab === "3",
+                active: currentActiveTab === '3',
               })}
               onClick={() => {
-                toggle("3");
+                toggle('3');
               }}
             >
               Circular
@@ -114,10 +106,10 @@ const Dashboard = () => {
           <NavItem>
             <NavLink
               className={classnames({
-                active: currentActiveTab === "4",
+                active: currentActiveTab === '4',
               })}
               onClick={() => {
-                toggle("4");
+                toggle('4');
               }}
             >
               Radar
@@ -126,10 +118,10 @@ const Dashboard = () => {
           <NavItem>
             <NavLink
               className={classnames({
-                active: currentActiveTab === "5",
+                active: currentActiveTab === '5',
               })}
               onClick={() => {
-                toggle("5");
+                toggle('5');
               }}
             >
               Burbuja
@@ -150,16 +142,16 @@ const Dashboard = () => {
                     <Bar
                       data={{
                         labels: [
-                          "Red",
-                          "Blue",
-                          "Yellow",
-                          "Green",
-                          "Purple",
-                          "Orange",
+                          'Red',
+                          'Blue',
+                          'Yellow',
+                          'Green',
+                          'Purple',
+                          'Orange',
                         ],
                         datasets: [
                           {
-                            label: "N° de ventas",
+                            label: 'N° de ventas',
                             fill: true /*
                           //backgroundColor: 'gradientStroke',
                           borderColor: '#1f8ef1',
@@ -178,25 +170,25 @@ const Dashboard = () => {
                               100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100,
                             ],
                             backgroundColor: [
-                              "rgb(255, 23, 0)",
-                              "rgb(4, 0, 154)",
-                              "rgb(251, 255, 0)",
-                              "rgb(6, 255, 0)",
-                              "rgb(154, 6, 128)",
-                              "rgb(255, 142, 0)",
+                              'rgb(255, 23, 0)',
+                              'rgb(4, 0, 154)',
+                              'rgb(251, 255, 0)',
+                              'rgb(6, 255, 0)',
+                              'rgb(154, 6, 128)',
+                              'rgb(255, 142, 0)',
                             ],
                           },
                           {
                             //segunda linea
-                            label: "% de ventas",
+                            label: '% de ventas',
                             data: [22, 29, 13, 55, 22, 13],
                             backgroundColor: [
-                              "rgba(55, 99, 132, 0.2)",
-                              "rgba(54, 162, 235, 0.2)",
-                              "rgba(55, 206, 86, 0.2)",
-                              "rgba(75, 192, 192, 0.2)",
-                              "rgba(53, 102, 255, 0.2)",
-                              "rgba(55, 159, 64, 0.2)",
+                              'rgba(55, 99, 132, 0.2)',
+                              'rgba(54, 162, 235, 0.2)',
+                              'rgba(55, 206, 86, 0.2)',
+                              'rgba(75, 192, 192, 0.2)',
+                              'rgba(53, 102, 255, 0.2)',
+                              'rgba(55, 159, 64, 0.2)',
                             ],
                           },
                         ],
@@ -207,11 +199,11 @@ const Dashboard = () => {
                         //animacion
                         animations: {
                           backgroundColor: {
-                            type: "color",
+                            type: 'color',
                             duration: 2000,
-                            easing: "linear",
-                            to: "blue",
-                            from: "red",
+                            easing: 'linear',
+                            to: 'blue',
+                            from: 'red',
                             loop: true,
                           },
                         },
@@ -245,47 +237,47 @@ const Dashboard = () => {
                   <Line
                     data={{
                       labels: [
-                        "Red",
-                        "Blue",
-                        "Yellow",
-                        "Green",
-                        "Purple",
-                        "Orange",
+                        'Red',
+                        'Blue',
+                        'Yellow',
+                        'Green',
+                        'Purple',
+                        'Orange',
                       ],
                       datasets: [
                         {
-                          label: "N° de ventas",
+                          label: 'N° de ventas',
                           data: [12, 19, 3, 5, 2, 3],
                           backgroundColor: [
-                            "rgba(255, 99, 132, 0.2)",
-                            "rgba(54, 162, 235, 0.2)",
-                            "rgba(255, 206, 86, 0.2)",
-                            "rgba(75, 192, 192, 0.2)",
-                            "rgba(153, 102, 255, 0.2)",
-                            "rgba(255, 159, 64, 0.2)",
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
                           ],
                           borderColor: [
-                            "rgba(255, 99, 132, 1)",
-                            "rgba(54, 162, 235, 1)",
-                            "rgba(255, 206, 86, 1)",
-                            "rgba(75, 192, 192, 1)",
-                            "rgba(153, 102, 255, 1)",
-                            "rgba(255, 159, 64, 1)",
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
                           ],
                           borderWidth: 3,
-                          hoverBackgroundColor: "white",
+                          hoverBackgroundColor: 'white',
                         },
                         {
                           //segunda linea
-                          label: "% de ventas",
+                          label: '% de ventas',
                           data: [22, 29, 13, 55, 22, 13],
                           backgroundColor: [
-                            "rgba(55, 99, 132, 0.2)",
-                            "rgba(54, 162, 235, 0.2)",
-                            "rgba(55, 206, 86, 0.2)",
-                            "rgba(75, 192, 192, 0.2)",
-                            "rgba(53, 102, 255, 0.2)",
-                            "rgba(55, 159, 64, 0.2)",
+                            'rgba(55, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(55, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(53, 102, 255, 0.2)',
+                            'rgba(55, 159, 64, 0.2)',
                           ],
                         },
                       ],
@@ -323,35 +315,35 @@ const Dashboard = () => {
                     <Pie
                       data={{
                         labels: [
-                          "Red",
-                          "Blue",
-                          "Yellow",
-                          "Green",
-                          "Purple",
-                          "Orange",
+                          'Red',
+                          'Blue',
+                          'Yellow',
+                          'Green',
+                          'Purple',
+                          'Orange',
                         ],
                         datasets: [
                           {
-                            label: "N° de ventas",
+                            label: 'N° de ventas',
                             data: [12, 19, 3, 5, 2, 3],
                             backgroundColor: [
-                              "rgba(255, 99, 132, 0.2)",
-                              "rgba(54, 162, 235, 0.2)",
-                              "rgba(255, 206, 86, 0.2)",
-                              "rgba(75, 192, 192, 0.2)",
-                              "rgba(153, 102, 255, 0.2)",
-                              "rgba(255, 159, 64, 0.2)",
+                              'rgba(255, 99, 132, 0.2)',
+                              'rgba(54, 162, 235, 0.2)',
+                              'rgba(255, 206, 86, 0.2)',
+                              'rgba(75, 192, 192, 0.2)',
+                              'rgba(153, 102, 255, 0.2)',
+                              'rgba(255, 159, 64, 0.2)',
                             ],
                             borderColor: [
-                              "rgba(255, 99, 132, 1)",
-                              "rgba(54, 162, 235, 1)",
-                              "rgba(255, 206, 86, 1)",
-                              "rgba(75, 192, 192, 1)",
-                              "rgba(153, 102, 255, 1)",
-                              "rgba(255, 159, 64, 1)",
+                              'rgba(255, 99, 132, 1)',
+                              'rgba(54, 162, 235, 1)',
+                              'rgba(255, 206, 86, 1)',
+                              'rgba(75, 192, 192, 1)',
+                              'rgba(153, 102, 255, 1)',
+                              'rgba(255, 159, 64, 1)',
                             ],
                             borderWidth: 3,
-                            hoverBackgroundColor: "white",
+                            hoverBackgroundColor: 'white',
                           },
                         ],
                       }}
@@ -389,47 +381,47 @@ const Dashboard = () => {
                     <Radar
                       data={{
                         labels: [
-                          "Red",
-                          "Blue",
-                          "Yellow",
-                          "Green",
-                          "Purple",
-                          "Orange",
+                          'Red',
+                          'Blue',
+                          'Yellow',
+                          'Green',
+                          'Purple',
+                          'Orange',
                         ],
                         datasets: [
                           {
-                            label: "N° de ventas",
+                            label: 'N° de ventas',
                             data: [12, 19, 3, 5, 2, 3],
                             backgroundColor: [
-                              "rgba(255, 99, 132, 0.2)",
-                              "rgba(54, 162, 235, 0.2)",
-                              "rgba(255, 206, 86, 0.2)",
-                              "rgba(75, 192, 192, 0.2)",
-                              "rgba(153, 102, 255, 0.2)",
-                              "rgba(255, 159, 64, 0.2)",
+                              'rgba(255, 99, 132, 0.2)',
+                              'rgba(54, 162, 235, 0.2)',
+                              'rgba(255, 206, 86, 0.2)',
+                              'rgba(75, 192, 192, 0.2)',
+                              'rgba(153, 102, 255, 0.2)',
+                              'rgba(255, 159, 64, 0.2)',
                             ],
                             borderColor: [
-                              "rgba(255, 99, 132, 1)",
-                              "rgba(54, 162, 235, 1)",
-                              "rgba(255, 206, 86, 1)",
-                              "rgba(75, 192, 192, 1)",
-                              "rgba(153, 102, 255, 1)",
-                              "rgba(255, 159, 64, 1)",
+                              'rgba(255, 99, 132, 1)',
+                              'rgba(54, 162, 235, 1)',
+                              'rgba(255, 206, 86, 1)',
+                              'rgba(75, 192, 192, 1)',
+                              'rgba(153, 102, 255, 1)',
+                              'rgba(255, 159, 64, 1)',
                             ],
                             borderWidth: 3,
-                            hoverBackgroundColor: "white",
+                            hoverBackgroundColor: 'white',
                           },
                           {
                             //segunda linea
-                            label: "% de ventas",
+                            label: '% de ventas',
                             data: [22, 29, 13, 55, 22, 13],
                             backgroundColor: [
-                              "rgba(55, 99, 132, 0.2)",
-                              "rgba(54, 162, 235, 0.2)",
-                              "rgba(55, 206, 86, 0.2)",
-                              "rgba(75, 192, 192, 0.2)",
-                              "rgba(53, 102, 255, 0.2)",
-                              "rgba(55, 159, 64, 0.2)",
+                              'rgba(55, 99, 132, 0.2)',
+                              'rgba(54, 162, 235, 0.2)',
+                              'rgba(55, 206, 86, 0.2)',
+                              'rgba(75, 192, 192, 0.2)',
+                              'rgba(53, 102, 255, 0.2)',
+                              'rgba(55, 159, 64, 0.2)',
                             ],
                           },
                         ],
@@ -440,11 +432,11 @@ const Dashboard = () => {
                         //animacion
                         animations: {
                           backgroundColor: {
-                            type: "color",
+                            type: 'color',
                             duration: 1000,
-                            easing: "easeOutQuad",
-                            to: "red",
-                            from: "blue",
+                            easing: 'easeOutQuad',
+                            to: 'red',
+                            from: 'blue',
                             loop: true,
                           },
 
@@ -487,16 +479,16 @@ const Dashboard = () => {
                     <Bubble
                       data={{
                         labels: [
-                          "Red",
-                          "Blue",
-                          "Yellow",
-                          "Green",
-                          "Purple",
-                          "Orange",
+                          'Red',
+                          'Blue',
+                          'Yellow',
+                          'Green',
+                          'Purple',
+                          'Orange',
                         ],
                         datasets: [
                           {
-                            label: "N° de ventas",
+                            label: 'N° de ventas',
                             data: [
                               {
                                 x: 20,
@@ -519,7 +511,7 @@ const Dashboard = () => {
                                 r: 30,
                               },
                             ],
-                            backgroundColor: "rgb(255, 23, 0)",
+                            backgroundColor: 'rgb(255, 23, 0)',
                           },
                         ],
                       }}
