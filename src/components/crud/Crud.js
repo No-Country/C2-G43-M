@@ -22,8 +22,12 @@ function Crud() {
         <Button className="btn btn-dark">Consultar STOCK</Button>
         <p></p>
         <div className="inputs">
+          <label>PRODUCTOS X U OTRA COSA</label>
           <div className="dato1">
-            <input type="number" />
+            <input
+              type="number"
+              placeholder="ACA VA EL DATO DE LA BASEDEDATOS"
+            />
             <button>
               <GoPencil font-size="30px" color="blue" />
             </button>
@@ -32,8 +36,9 @@ function Crud() {
               <AiOutlineDelete font-size="30px" color="red" />
             </button>
           </div>
+          <label>PRODUCTOS Y</label>
           <div className="dato2">
-            <input type="number" />
+            <input type="number" placeholder="ACA DATO DE BASEDEDATOS" />
             <button>
               <GoPencil font-size="30px" color="blue" />
             </button>
