@@ -3,11 +3,21 @@
 }
 
 .layout__content {
-  padding-left: var(--sidebar-width);
+  display: flex;
+  justify-content: center;
+  margin-left: 40px;
   background-color: var(--second-bg);
   min-height: 100vh;
 }
 
 .layout__content-main {
   padding: 30px;
+}
+
+@media (max-width: 700px) {
+  .layout__content {
+    margin-left: 10px;
+    min-height: 100vh;
+    max-width: 80vw;
+  }
 }

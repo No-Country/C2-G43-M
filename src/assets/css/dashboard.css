@@ -33,8 +33,8 @@ h4:hover {
   font-size: 27px;
 }
 
-.tabs a {
-  color: gray;
+a {
+  color: gray !important;
   font-weight: bold;
 }
 .tabsitem:hover {
