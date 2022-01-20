@@ -14,6 +14,7 @@ import {
   Col,
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./dashboard.css";
 import classnames from "classnames";
 import statusCards from "../assets/JsonData/status-card-data.json";
 
@@ -46,107 +47,125 @@ const Dashboard = () => {
     },
   };*/
   return (
-    <div>
+    <div className="dashboard__container">
       <h2 className="page-header">Dashboard</h2>
-      <div //ESTILOS DEL CONTENEDOR DE LOS GRAFICOS
-        className="dashboard "
-        style={{
-          display: "block",
-          width: 950,
-          padding: 30,
-          background: "",
-          //para caMbiar el color
-        }}
-      >
-        <h4>Total de ventas</h4>
+      {/*ACA COMIENZAN LAS CUATRO TARJETAS */}
+      <div className="charts__container">
+        <div className="row ">
+          <div className="col-6">
+            <div className="row charts__container-cards">
+              {statusCards.map((item, index) => (
+                <div className="col-5" key={index}>
+                  <StatusCard
+                    icon={item.icon}
+                    count={item.count}
+                    title={item.title}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
-        <Nav tabs className="tabs">
-          <NavItem className="tabitem">
-            <NavLink
-              className={classnames({
-                active: currentActiveTab === "1",
-              })}
-              onClick={() => {
-                toggle("1");
-              }}
-            >
-              Barras
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink
-              className={classnames({
-                active: currentActiveTab === "2",
-              })}
-              onClick={() => {
-                toggle("2");
-              }}
-            >
-              Lineas
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink
-              className={classnames({
-                active: currentActiveTab === "3",
-              })}
-              onClick={() => {
-                toggle("3");
-              }}
-            >
-              Circular
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink
-              className={classnames({
-                active: currentActiveTab === "4",
-              })}
-              onClick={() => {
-                toggle("4");
-              }}
-            >
-              Radar
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink
-              className={classnames({
-                active: currentActiveTab === "5",
-              })}
-              onClick={() => {
-                toggle("5");
-              }}
-            >
-              Burbuja
-            </NavLink>
-          </NavItem>
-        </Nav>
-        {/*COMIENZO DE GRAFICO DE BARRAS */}
-        <TabContent
-          activeTab={currentActiveTab}
-          className=" border border-dark"
+        <div //ESTILOS DEL CONTENEDOR DE LOS GRAFICOS
+          className="dashboard"
+          style={{
+            display: "block",
+            width: 950,
+            padding: 30,
+            background: "",
+            //para caMbiar el color
+          }}
         >
-          <TabPane tabId="1">
-            <Row>
-              <Col sm="12">
-                <div>
-                  {/*BLOQUE DE CONFIGURACION */}
+          <h4>Total de ventas</h4>
+
+          <Nav tabs className="tabs">
+            <NavItem className="tabitem">
+              <NavLink
+                className={classnames({
+                  active: currentActiveTab === "1",
+                })}
+                onClick={() => {
+                  toggle("1");
+                }}
+              >
+                Barras
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={classnames({
+                  active: currentActiveTab === "2",
+                })}
+                onClick={() => {
+                  toggle("2");
+                }}
+              >
+                Lineas
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={classnames({
+                  active: currentActiveTab === "3",
+                })}
+                onClick={() => {
+                  toggle("3");
+                }}
+              >
+                Circular
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={classnames({
+                  active: currentActiveTab === "4",
+                })}
+                onClick={() => {
+                  toggle("4");
+                }}
+              >
+                Radar
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={classnames({
+                  active: currentActiveTab === "5",
+                })}
+                onClick={() => {
+                  toggle("5");
+                }}
+              >
+                Burbuja
+              </NavLink>
+            </NavItem>
+          </Nav>
+          {/*COMIENZO DE GRAFICO DE BARRAS */}
+          <TabContent
+            activeTab={currentActiveTab}
+            className=" border border-dark"
+          >
+            <TabPane tabId="1">
+              <Row>
+                <Col sm="12">
                   <div>
-                    <Bar
-                      data={{
-                        labels: [
-                          "Red",
-                          "Blue",
-                          "Yellow",
-                          "Green",
-                          "Purple",
-                          "Orange",
-                        ],
-                        datasets: [
-                          {
-                            label: "N° de ventas",
-                            fill: true /*
+                    {/*BLOQUE DE CONFIGURACION */}
+                    <div>
+                      <Bar
+                        data={{
+                          labels: [
+                            "Red",
+                            "Blue",
+                            "Yellow",
+                            "Green",
+                            "Purple",
+                            "Orange",
+                          ],
+                          datasets: [
+                            {
+                              label: "N° de ventas",
+                              fill: true /*
                           //backgroundColor: 'gradientStroke',
                           borderColor: '#1f8ef1',
                           borderWidth: 2,
@@ -160,17 +179,107 @@ const Dashboard = () => {
                           pointHoverBorderWidth: 15,
                           pointRadius: 4,*/,
 
-                            data: [
-                              100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100,
+                              data: [
+                                100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110,
+                                100,
+                              ],
+                              backgroundColor: [
+                                "rgb(255, 23, 0)",
+                                "rgb(4, 0, 154)",
+                                "rgb(251, 255, 0)",
+                                "rgb(6, 255, 0)",
+                                "rgb(154, 6, 128)",
+                                "rgb(255, 142, 0)",
+                              ],
+                            },
+                            {
+                              //segunda linea
+                              label: "% de ventas",
+                              data: [22, 29, 13, 55, 22, 13],
+                              backgroundColor: [
+                                "rgba(55, 99, 132, 0.2)",
+                                "rgba(54, 162, 235, 0.2)",
+                                "rgba(55, 206, 86, 0.2)",
+                                "rgba(75, 192, 192, 0.2)",
+                                "rgba(53, 102, 255, 0.2)",
+                                "rgba(55, 159, 64, 0.2)",
+                              ],
+                            },
+                          ],
+                        }}
+                        height={400}
+                        width={600}
+                        options={{
+                          //animacion
+                          animations: {
+                            backgroundColor: {
+                              type: "color",
+                              duration: 2000,
+                              easing: "linear",
+                              to: "blue",
+                              from: "red",
+                              loop: true,
+                            },
+                          },
+                          maintainAspectRatio: false,
+                          scales: {
+                            yAxes: [
+                              {
+                                ticks: {
+                                  beginAtZero: true,
+                                },
+                              },
                             ],
+                          },
+                          legend: {
+                            labels: {
+                              fontSize: 25,
+                            },
+                          },
+                        }}
+                      />
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </TabPane>
+            {/*COMIENZO DE GRAFICO DE LINEAS/*/}
+            <TabPane tabId="2">
+              <Row>
+                <Col sm="12">
+                  <div className="line">
+                    <Line
+                      data={{
+                        labels: [
+                          "Red",
+                          "Blue",
+                          "Yellow",
+                          "Green",
+                          "Purple",
+                          "Orange",
+                        ],
+                        datasets: [
+                          {
+                            label: "N° de ventas",
+                            data: [12, 19, 3, 5, 2, 3],
                             backgroundColor: [
-                              "rgb(255, 23, 0)",
-                              "rgb(4, 0, 154)",
-                              "rgb(251, 255, 0)",
-                              "rgb(6, 255, 0)",
-                              "rgb(154, 6, 128)",
-                              "rgb(255, 142, 0)",
+                              "rgba(255, 99, 132, 0.2)",
+                              "rgba(54, 162, 235, 0.2)",
+                              "rgba(255, 206, 86, 0.2)",
+                              "rgba(75, 192, 192, 0.2)",
+                              "rgba(153, 102, 255, 0.2)",
+                              "rgba(255, 159, 64, 0.2)",
                             ],
+                            borderColor: [
+                              "rgba(255, 99, 132, 1)",
+                              "rgba(54, 162, 235, 1)",
+                              "rgba(255, 206, 86, 1)",
+                              "rgba(75, 192, 192, 1)",
+                              "rgba(153, 102, 255, 1)",
+                              "rgba(255, 159, 64, 1)",
+                            ],
+                            borderWidth: 3,
+                            hoverBackgroundColor: "white",
                           },
                           {
                             //segunda linea
@@ -190,17 +299,6 @@ const Dashboard = () => {
                       height={400}
                       width={600}
                       options={{
-                        //animacion
-                        animations: {
-                          backgroundColor: {
-                            type: "color",
-                            duration: 2000,
-                            easing: "linear",
-                            to: "blue",
-                            from: "red",
-                            loop: true,
-                          },
-                        },
                         maintainAspectRatio: false,
                         scales: {
                           yAxes: [
@@ -219,338 +317,244 @@ const Dashboard = () => {
                       }}
                     />
                   </div>
-                </div>
-              </Col>
-            </Row>
-          </TabPane>
-          {/*COMIENZO DE GRAFICO DE LINEAS/*/}
-          <TabPane tabId="2">
-            <Row>
-              <Col sm="12">
-                <div className="line">
-                  <Line
-                    data={{
-                      labels: [
-                        "Red",
-                        "Blue",
-                        "Yellow",
-                        "Green",
-                        "Purple",
-                        "Orange",
-                      ],
-                      datasets: [
-                        {
-                          label: "N° de ventas",
-                          data: [12, 19, 3, 5, 2, 3],
-                          backgroundColor: [
-                            "rgba(255, 99, 132, 0.2)",
-                            "rgba(54, 162, 235, 0.2)",
-                            "rgba(255, 206, 86, 0.2)",
-                            "rgba(75, 192, 192, 0.2)",
-                            "rgba(153, 102, 255, 0.2)",
-                            "rgba(255, 159, 64, 0.2)",
+                </Col>
+              </Row>
+            </TabPane>
+            {/*COMIENZO DE GRAFICO REDONDO */}
+            <TabPane tabId="3">
+              <Row>
+                <Col sm="12">
+                  <div>
+                    <div className="line">
+                      <Pie
+                        data={{
+                          labels: [
+                            "Red",
+                            "Blue",
+                            "Yellow",
+                            "Green",
+                            "Purple",
+                            "Orange",
                           ],
-                          borderColor: [
-                            "rgba(255, 99, 132, 1)",
-                            "rgba(54, 162, 235, 1)",
-                            "rgba(255, 206, 86, 1)",
-                            "rgba(75, 192, 192, 1)",
-                            "rgba(153, 102, 255, 1)",
-                            "rgba(255, 159, 64, 1)",
-                          ],
-                          borderWidth: 3,
-                          hoverBackgroundColor: "white",
-                        },
-                        {
-                          //segunda linea
-                          label: "% de ventas",
-                          data: [22, 29, 13, 55, 22, 13],
-                          backgroundColor: [
-                            "rgba(55, 99, 132, 0.2)",
-                            "rgba(54, 162, 235, 0.2)",
-                            "rgba(55, 206, 86, 0.2)",
-                            "rgba(75, 192, 192, 0.2)",
-                            "rgba(53, 102, 255, 0.2)",
-                            "rgba(55, 159, 64, 0.2)",
-                          ],
-                        },
-                      ],
-                    }}
-                    height={400}
-                    width={600}
-                    options={{
-                      maintainAspectRatio: false,
-                      scales: {
-                        yAxes: [
-                          {
-                            ticks: {
-                              beginAtZero: true,
-                            },
-                          },
-                        ],
-                      },
-                      legend: {
-                        labels: {
-                          fontSize: 25,
-                        },
-                      },
-                    }}
-                  />
-                </div>
-              </Col>
-            </Row>
-          </TabPane>
-          {/*COMIENZO DE GRAFICO REDONDO */}
-          <TabPane tabId="3">
-            <Row>
-              <Col sm="12">
-                <div>
-                  <div className="line">
-                    <Pie
-                      data={{
-                        labels: [
-                          "Red",
-                          "Blue",
-                          "Yellow",
-                          "Green",
-                          "Purple",
-                          "Orange",
-                        ],
-                        datasets: [
-                          {
-                            label: "N° de ventas",
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                              "rgba(255, 99, 132, 0.2)",
-                              "rgba(54, 162, 235, 0.2)",
-                              "rgba(255, 206, 86, 0.2)",
-                              "rgba(75, 192, 192, 0.2)",
-                              "rgba(153, 102, 255, 0.2)",
-                              "rgba(255, 159, 64, 0.2)",
-                            ],
-                            borderColor: [
-                              "rgba(255, 99, 132, 1)",
-                              "rgba(54, 162, 235, 1)",
-                              "rgba(255, 206, 86, 1)",
-                              "rgba(75, 192, 192, 1)",
-                              "rgba(153, 102, 255, 1)",
-                              "rgba(255, 159, 64, 1)",
-                            ],
-                            borderWidth: 3,
-                            hoverBackgroundColor: "white",
-                          },
-                        ],
-                      }}
-                      height={400}
-                      width={636}
-                      options={{
-                        maintainAspectRatio: false,
-                        scales: {
-                          yAxes: [
+                          datasets: [
                             {
-                              ticks: {
-                                beginAtZero: true,
-                              },
+                              label: "N° de ventas",
+                              data: [12, 19, 3, 5, 2, 3],
+                              backgroundColor: [
+                                "rgba(255, 99, 132, 0.2)",
+                                "rgba(54, 162, 235, 0.2)",
+                                "rgba(255, 206, 86, 0.2)",
+                                "rgba(75, 192, 192, 0.2)",
+                                "rgba(153, 102, 255, 0.2)",
+                                "rgba(255, 159, 64, 0.2)",
+                              ],
+                              borderColor: [
+                                "rgba(255, 99, 132, 1)",
+                                "rgba(54, 162, 235, 1)",
+                                "rgba(255, 206, 86, 1)",
+                                "rgba(75, 192, 192, 1)",
+                                "rgba(153, 102, 255, 1)",
+                                "rgba(255, 159, 64, 1)",
+                              ],
+                              borderWidth: 3,
+                              hoverBackgroundColor: "white",
                             },
                           ],
-                        },
-                        legend: {
-                          labels: {
-                            fontSize: 25,
+                        }}
+                        height={400}
+                        width={636}
+                        options={{
+                          maintainAspectRatio: false,
+                          scales: {
+                            yAxes: [
+                              {
+                                ticks: {
+                                  beginAtZero: true,
+                                },
+                              },
+                            ],
                           },
-                        },
-                      }}
-                    />
+                          legend: {
+                            labels: {
+                              fontSize: 25,
+                            },
+                          },
+                        }}
+                      />
+                    </div>
                   </div>
-                </div>
-              </Col>
-            </Row>
-          </TabPane>
-          {/*COMIENZO DE GRAFICO  RADAR */}
-          <TabPane tabId="4">
-            <Row>
-              <Col sm="12">
-                <div>
-                  <div className="line">
-                    <Radar
-                      data={{
-                        labels: [
-                          "Red",
-                          "Blue",
-                          "Yellow",
-                          "Green",
-                          "Purple",
-                          "Orange",
-                        ],
-                        datasets: [
-                          {
-                            label: "N° de ventas",
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                              "rgba(255, 99, 132, 0.2)",
-                              "rgba(54, 162, 235, 0.2)",
-                              "rgba(255, 206, 86, 0.2)",
-                              "rgba(75, 192, 192, 0.2)",
-                              "rgba(153, 102, 255, 0.2)",
-                              "rgba(255, 159, 64, 0.2)",
-                            ],
-                            borderColor: [
-                              "rgba(255, 99, 132, 1)",
-                              "rgba(54, 162, 235, 1)",
-                              "rgba(255, 206, 86, 1)",
-                              "rgba(75, 192, 192, 1)",
-                              "rgba(153, 102, 255, 1)",
-                              "rgba(255, 159, 64, 1)",
-                            ],
-                            borderWidth: 3,
-                            hoverBackgroundColor: "white",
-                          },
-                          {
-                            //segunda linea
-                            label: "% de ventas",
-                            data: [22, 29, 13, 55, 22, 13],
-                            backgroundColor: [
-                              "rgba(55, 99, 132, 0.2)",
-                              "rgba(54, 162, 235, 0.2)",
-                              "rgba(55, 206, 86, 0.2)",
-                              "rgba(75, 192, 192, 0.2)",
-                              "rgba(53, 102, 255, 0.2)",
-                              "rgba(55, 159, 64, 0.2)",
-                            ],
-                          },
-                        ],
-                      }}
-                      height={400}
-                      width={636}
-                      options={{
-                        //animacion
-                        animations: {
-                          backgroundColor: {
-                            type: "color",
-                            duration: 1000,
-                            easing: "easeOutQuad",
-                            to: "red",
-                            from: "blue",
-                            loop: true,
-                          },
+                </Col>
+              </Row>
+            </TabPane>
+            {/*COMIENZO DE GRAFICO  RADAR */}
+            <TabPane tabId="4">
+              <Row>
+                <Col sm="12">
+                  <div>
+                    <div className="line">
+                      <Radar
+                        data={{
+                          labels: [
+                            "Red",
+                            "Blue",
+                            "Yellow",
+                            "Green",
+                            "Purple",
+                            "Orange",
+                          ],
+                          datasets: [
+                            {
+                              label: "N° de ventas",
+                              data: [12, 19, 3, 5, 2, 3],
+                              backgroundColor: [
+                                "rgba(255, 99, 132, 0.2)",
+                                "rgba(54, 162, 235, 0.2)",
+                                "rgba(255, 206, 86, 0.2)",
+                                "rgba(75, 192, 192, 0.2)",
+                                "rgba(153, 102, 255, 0.2)",
+                                "rgba(255, 159, 64, 0.2)",
+                              ],
+                              borderColor: [
+                                "rgba(255, 99, 132, 1)",
+                                "rgba(54, 162, 235, 1)",
+                                "rgba(255, 206, 86, 1)",
+                                "rgba(75, 192, 192, 1)",
+                                "rgba(153, 102, 255, 1)",
+                                "rgba(255, 159, 64, 1)",
+                              ],
+                              borderWidth: 3,
+                              hoverBackgroundColor: "white",
+                            },
+                            {
+                              //segunda linea
+                              label: "% de ventas",
+                              data: [22, 29, 13, 55, 22, 13],
+                              backgroundColor: [
+                                "rgba(55, 99, 132, 0.2)",
+                                "rgba(54, 162, 235, 0.2)",
+                                "rgba(55, 206, 86, 0.2)",
+                                "rgba(75, 192, 192, 0.2)",
+                                "rgba(53, 102, 255, 0.2)",
+                                "rgba(55, 159, 64, 0.2)",
+                              ],
+                            },
+                          ],
+                        }}
+                        height={400}
+                        width={636}
+                        options={{
+                          //animacion
+                          animations: {
+                            backgroundColor: {
+                              type: "color",
+                              duration: 1000,
+                              easing: "easeOutQuad",
+                              to: "red",
+                              from: "blue",
+                              loop: true,
+                            },
 
-                          /* tension: {
+                            /* tension: {
                           duration: 1000,
                           easing: 'linear',
                           from: 1,
                           to: 0,
                           loop: true,
                         },*/
-                        },
-                        maintainAspectRatio: false,
-                        scales: {
-                          yAxes: [
-                            {
-                              ticks: {
-                                beginAtZero: true,
-                              },
-                            },
-                          ],
-                        },
-                        legend: {
-                          labels: {
-                            fontSize: 25,
                           },
-                        },
-                      }}
-                    />
-                  </div>
-                </div>
-              </Col>
-            </Row>
-          </TabPane>
-          {/*COMIENZO GRAFICO BURBUJA */}
-          <TabPane tabId="5">
-            <Row>
-              <Col sm="12">
-                <div>
-                  <div className="line">
-                    <Bubble
-                      data={{
-                        labels: [
-                          "Red",
-                          "Blue",
-                          "Yellow",
-                          "Green",
-                          "Purple",
-                          "Orange",
-                        ],
-                        datasets: [
-                          {
-                            label: "N° de ventas",
-                            data: [
+                          maintainAspectRatio: false,
+                          scales: {
+                            yAxes: [
                               {
-                                x: 20,
-                                y: 30,
-                                r: 15,
-                              },
-                              {
-                                x: 400,
-                                y: 10,
-                                r: 10,
-                              },
-                              {
-                                x: 30,
-                                y: 20,
-                                r: 15,
-                              },
-                              {
-                                x: 290,
-                                y: 20,
-                                r: 30,
+                                ticks: {
+                                  beginAtZero: true,
+                                },
                               },
                             ],
-                            backgroundColor: "rgb(255, 23, 0)",
                           },
-                        ],
-                      }}
-                      height={400}
-                      width={636}
-                      options={{
-                        maintainAspectRatio: false,
-                        scales: {
-                          yAxes: [
+                          legend: {
+                            labels: {
+                              fontSize: 25,
+                            },
+                          },
+                        }}
+                      />
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </TabPane>
+            {/*COMIENZO GRAFICO BURBUJA */}
+            <TabPane tabId="5">
+              <Row>
+                <Col sm="12">
+                  <div>
+                    <div className="line">
+                      <Bubble
+                        data={{
+                          labels: [
+                            "Red",
+                            "Blue",
+                            "Yellow",
+                            "Green",
+                            "Purple",
+                            "Orange",
+                          ],
+                          datasets: [
                             {
-                              ticks: {
-                                beginAtZero: true,
-                              },
+                              label: "N° de ventas",
+                              data: [
+                                {
+                                  x: 20,
+                                  y: 30,
+                                  r: 15,
+                                },
+                                {
+                                  x: 400,
+                                  y: 10,
+                                  r: 10,
+                                },
+                                {
+                                  x: 30,
+                                  y: 20,
+                                  r: 15,
+                                },
+                                {
+                                  x: 290,
+                                  y: 20,
+                                  r: 30,
+                                },
+                              ],
+                              backgroundColor: "rgb(255, 23, 0)",
                             },
                           ],
-                        },
-                        legend: {
-                          labels: {
-                            fontSize: 25,
+                        }}
+                        height={400}
+                        width={636}
+                        options={{
+                          maintainAspectRatio: false,
+                          scales: {
+                            yAxes: [
+                              {
+                                ticks: {
+                                  beginAtZero: true,
+                                },
+                              },
+                            ],
                           },
-                        },
-                      }}
-                    />
+                          legend: {
+                            labels: {
+                              fontSize: 25,
+                            },
+                          },
+                        }}
+                      />
+                    </div>
                   </div>
-                </div>
-              </Col>
-            </Row>
-          </TabPane>
-        </TabContent>
-      </div>
-
-      {/*ACA COMIENZAN LAS CUATRO TARJETAS */}
-      <div className="row">
-        <div className="col-6">
-          <div className="row">
-            {statusCards.map((item, index) => (
-              <div className="col-5" key={index}>
-                <StatusCard
-                  icon={item.icon}
-                  count={item.count}
-                  title={item.title}
-                />
-              </div>
-            ))}
-          </div>
+                </Col>
+              </Row>
+            </TabPane>
+          </TabContent>
         </div>
       </div>
     </div>

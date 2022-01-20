@@ -1,6 +1,7 @@
 .sidebar {
     overflow: hidden;
     overflow-y: scroll;
+    position: fixed;
     min-width: 80px;
     max-width: 80px;
     height: 100vh;
@@ -11,6 +12,7 @@
     box-shadow: var(--box-shadow);
     transition: 1.2s;
     scrollbar-width: none;
+    z-index: 100;
 }
 .sidebar::-webkit-scrollbar{
     display: none;

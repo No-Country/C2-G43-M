@@ -58,3 +58,10 @@
 .status-card:hover {
     color: var(--txt-white);
 }
+
+@media (max-width: 700px) {
+    .status-card{
+        flex-direction: column;
+        min-width: 110px;
+    }
+}
