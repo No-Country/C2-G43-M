@@ -1,0 +1,106 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--main-bg);
+    box-shadow: var(--box-shadow);
+    padding: 80px;
+    -webkit-animation: scale-up-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.login-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: var(--main-bg);
+    margin-bottom: 20px;
+    padding: 13px 0;
+}
+
+.login-box--subtitle{
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.textbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: var(--main-bg);
+}
+
+.textbox i{
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+
+.textbox input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: var(--main-bg);
+    outline: none;
+    background: none;
+    font-size: 18px;
+    width: 100%;
+    margin: 0 10px;
+    padding: 15px;
+}
+
+.btnn{
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    margin: 12px 0;
+    border-radius: 8px;
+}
+
+.btnn:hover{
+    background-color: var(--main-bg);
+    box-shadow: var(--box-shadow);
+    border: 2px solid var(--second-color);
+    transition: 2s;
+}
+
+@-webkit-keyframes scale-up-top {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+    }
+  }
+  @keyframes scale-up-top {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+    }
+  }
+  

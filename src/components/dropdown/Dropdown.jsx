@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import logo from "../../assets/images/favicon.png";
 import "./dropdown.css";
 
 const clickOutsideRef = (content_ref, toggle_ref) => {

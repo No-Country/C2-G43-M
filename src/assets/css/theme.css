@@ -6,10 +6,10 @@
 }
 
 .theme-mode-dark {
-    --main-bg: var(--main-bg-dark) !important;
-    --second-bg: var(--second-bg-dark) !important;
-    --txt-color: var(--txt-color-dark) !important;
-    --box-shadow: var(--box-shadow-dark) !important;
+    --main-bg: var(--main-bg-dark);
+    --second-bg: var(--second-bg-dark);
+    --txt-color: var(--txt-color-dark);
+    --box-shadow: var(--box-shadow-dark);
 }
 
 .theme-color-blue {

@@ -1,18 +1,22 @@
 [
     {
         "icon": "bx bx-user",
+        "route": "./",
         "content": "Mi perfil"
     },
     {
         "icon": "bx bx-wallet-alt",
-        "content": "Mi Wallet"
+        "route": "./wallet",
+        "content": "Mi Billetera"
     },
     {
         "icon": "bx bx-cog",
+        "route": "./settings",
         "content": "Configuración"
     },
     {
         "icon": "bx bx-log-out-circle bx-rotate-180",
+        "route": "./",
         "content": "Logout"
     }
 ]

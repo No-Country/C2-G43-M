@@ -11,6 +11,7 @@ import ThemeAction from "../../redux/actions/ThemeAction";
 import Dashboard from "../../pages/Dashboard";
 import Customers from "../../pages/Customers";
 import Employees from "../../pages/Employees";
+import Login from "../login/Login";
 
 const Layout = ({ props }) => {
   const ThemeReducer = useSelector((state) => state.ThemeReducer);
@@ -35,9 +36,10 @@ const Layout = ({ props }) => {
           <Sidebar {...props} />
           <div className="layout__content-main">
             <Routes>
+              <Route exact path="/" element={<Login />} />
               <Route path="/customers" element={<Customers />} />
-              <Route exact path="/" element={<Dashboard />} />
-              <Route path="/employees" element={<Employees />}/>
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/employees" element={<Employees />} />
             </Routes>
           </div>
         </div>

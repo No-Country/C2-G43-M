@@ -3,6 +3,7 @@
   margin-top: 10px;
   margin-left: 4px;
   margin-right: auto;
+  border-width: 4px;
   display: flex;
   flex-direction: end;
   align-items: center;
@@ -14,9 +15,9 @@
   margin-bottom: 25px;
 }
 .dashboard:hover {
-  border-radius: 15px;
-  border-width: 4px;
+  border-radius: 30px;
   border-style: solid;
+  transition: 1s;
   border-image: linear-gradient(to right, rgb(75, 75, 170), darkorchid) 1;
 }
 
@@ -27,10 +28,6 @@
 h4 {
   color: gray;
   font-family: serif;
-}
-h4:hover {
-  color: #0070f3;
-  font-size: 27px;
 }
 
 a {

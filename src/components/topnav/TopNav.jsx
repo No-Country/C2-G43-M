@@ -75,7 +75,11 @@ const Topnav = () => {
             customToggle={() => renderUserToggle(curr_user)}
             contentData={user_menu}
             renderItems={(item, index) => renderUserMenu(item, index)}
-          />
+          >
+            {user_menu.map((item, index) => (
+              <Link to={item.route} key={index} />
+            ))}
+          </Dropdown>
         </div>
         <div className="topnav__right-item">
           <Dropdown
