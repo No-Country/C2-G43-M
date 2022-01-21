@@ -4,6 +4,10 @@
     margin-left: 25vw;
     width: 100vw;
 }
+.charts__container-cards{
+    display: flex;
+    flex-direction: row;
+}
 
 @media (max-width: 700px)  {
     .dashboard__container{
@@ -13,15 +17,15 @@
         display: flex;
         flex-direction: column;
     }
-    .charts__container .charts__container-cards {
+    .charts__container .charts__container-card {
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: 80vw;
     }
-    /*.charts__container-cards{
+    .charts__container-cards{
         display: flex;
         flex-direction: column;
-    }*/
-
+        justify-content: center;
+    }
 }
