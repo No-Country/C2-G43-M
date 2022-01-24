@@ -37,3 +37,7 @@ a {
 .tabsitem:hover {
   background-color: aqua;
 }
+
+.customers{
+  background-color: var(--second-bg);
+}

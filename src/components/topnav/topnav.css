@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-around;
     height: var(--topnav-height);
+    background-color: var(--main-bg);
 }
 
 .topnav__search {

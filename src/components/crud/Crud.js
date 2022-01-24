@@ -1,10 +1,27 @@
-import React from 'react';
-import { FormGroup, Label, Input, Button, Form } from 'reactstrap';
-import { GoPencil } from 'react-icons/go';
-import { AiOutlineDelete } from 'react-icons/ai';
+import React, { useEffect } from "react";
+import { FormGroup, Label, Input, Form } from "reactstrap";
+import "../../assets/boxicons-2.0.7/fonts/boxicons.svg";
 //import { RiDeleteBin2Line } from 'react-icons/ri';
-import {} from '../../assets/css/crud.css';
+import {} from "../../assets/css/crud.css";
+import { useSelector, useDispatch } from "react-redux";
+
+import ThemeAction from "../../redux/actions/ThemeAction";
+
 function Crud() {
+  const ThemeReducer = useSelector((state) => state.ThemeReducer);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const themeClass = localStorage.getItem("themeMode", "theme-mode-light");
+
+    const colorClass = localStorage.getItem("colorMode", "theme-mode-light");
+
+    dispatch(ThemeAction.setMode(themeClass));
+
+    dispatch(ThemeAction.setColor(colorClass));
+  }, [dispatch]);
+
   return (
     <div className="crud">
       <Form className="formuno">
@@ -19,35 +36,39 @@ function Crud() {
           </Input>
         </FormGroup>
 
-        <Button className="btn btn-dark">Consultar STOCK</Button>
+        <button
+          className={`crud__button ${ThemeReducer.mode} ${ThemeReducer.color}`}
+        >
+          Consultar
+        </button>
         <p></p>
         <div className="inputs">
-          <label>PRODUCTOS X U OTRA COSA</label>
+          <label>Cliente</label>
           <div className="dato1">
-            <input
-              type="number"
-              placeholder="ACA VA EL DATO DE LA BASEDEDATOS"
-            />
-            <button>
-              <GoPencil font-size="30px" color="blue" />
+            <input type="text" placeholder="Nombre completo" />
+            <button className={`crud__button-pencil`}>
+              <i className="bx bx-pencil"></i>
             </button>
-
-            <button>
-              <AiOutlineDelete font-size="30px" color="red" />
+            <button className={`crud__button-pencil`}>
+              <i class="bx bx-trash"></i>
             </button>
           </div>
-          <label>PRODUCTOS Y</label>
-          <div className="dato2">
-            <input type="number" placeholder="ACA DATO DE BASEDEDATOS" />
-            <button>
-              <GoPencil font-size="30px" color="blue" />
+          <label>Producto</label>
+          <div className="dato1">
+            <input type="text" placeholder="Nombre producto" />
+            <button className={`crud__button-pencil`}>
+              <i className="bx bx-pencil"></i>
             </button>
-            <button>
-              <AiOutlineDelete font-size="30px" color="red" />
+            <button className={`crud__button-pencil`}>
+              <i class="bx bx-trash"></i>
             </button>
           </div>
         </div>
-        <Button className="btn btn-dark mt='15px'">Guardar</Button>
+        <button
+          className={`crud__button ${ThemeReducer.mode} ${ThemeReducer.color}`}
+        >
+          Guardar
+        </button>
       </Form>
     </div>
   );

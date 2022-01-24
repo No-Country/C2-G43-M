@@ -31,10 +31,10 @@ const renderBody = (item, index) => (
 const Employees = () => {
   return (
     <div>
-      <h2 className="page-header">Clientes</h2>
+      <h2 className="page-header">Empleados</h2>
       <div className="row">
         <div className="col-12">
-          <div className="card">
+          <div className="card__">
             <div className="card__body">
               <Table
                 limit="10"

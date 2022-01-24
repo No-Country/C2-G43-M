@@ -3,8 +3,31 @@
   justify-content:left;
   align-items: center;
 }
-button {
-  margin-left: 15px;
+.crud__button {
+  background-color: var(--second-color);
+  color: var(--main-bg);
+  border: 1px solid var(--second-color);
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.crud__button:hover {
+  background-color: var(--second-color);
+  color: var(--main-bg);
+  opacity:0.7;
+}
+.crud__button-pencil{
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  margin: 4px;
+  color: var(--main-bg);
+  background-color: var(--second-color);
+}
+.crud__button-pencil:hover{
+  transition: 0.5s;
+  opacity:0.7;
 }
 .inputs {
   margin-top: 5px;
@@ -13,16 +36,26 @@ button {
 }
 .dato1 {
   margin-bottom: 25px;
-  border: 3px solid black;
+  margin-top: 8px;
+  padding: 5px;
+  border: 1px solid var(--bg-color);
+  padding: 5px;
   margin-right: 25px;
   border-radius: 5px;
+  transition: 0.5s;
+}
+.dato1 input{
+  background-color: var(--second-color);
 }
 .dato2 {
   margin-bottom: 25px;
-  border: 3px solid black;
-  margin-right: 25px;
+  margin-top: 8px;
+  border: 1px solid var(--second-color);
+  padding: 5px;
+  /*margin-right: 25px;*/
   border-radius: 5px;
+  transition: 0.5s;
 }
-label {
-  font-size: larger;
+.foruno{
+  border: 1px solid var(--second-color);
 }
