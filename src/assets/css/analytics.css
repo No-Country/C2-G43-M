@@ -1,0 +1,16 @@
+.chart {
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: gray;
+}
+@media (max-width: 400) {
+  .chart {
+    width: 100%;
+  }
+}

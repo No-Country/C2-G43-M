@@ -1,27 +1,27 @@
-import React, { useEffect } from "react";
-import Sidebar from "../../components/sidebar/Sidebar";
-import TopNav from "../topnav/TopNav";
-import "./layout.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from 'react';
+import Sidebar from '../../components/sidebar/Sidebar';
+import TopNav from '../topnav/TopNav';
+import './layout.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
 
-import ThemeAction from "../../redux/actions/ThemeAction";
-
-import Dashboard from "../../pages/Dashboard";
-import Customers from "../../pages/Customers";
-import Employees from "../../pages/Employees";
-import Login from "../login/Login";
-
+import ThemeAction from '../../redux/actions/ThemeAction';
+import Discount from '../../pages/Discount';
+import Dashboard from '../../pages/Dashboard';
+import Customers from '../../pages/Customers';
+import Employees from '../../pages/Employees';
+import Login from '../login/Login';
+import Analytics from '../../pages/Analytics';
 const Layout = ({ props }) => {
   const ThemeReducer = useSelector((state) => state.ThemeReducer);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const themeClass = localStorage.getItem("themeMode", "theme-mode-light");
+    const themeClass = localStorage.getItem('themeMode', 'theme-mode-light');
 
-    const colorClass = localStorage.getItem("colorMode", "theme-mode-light");
+    const colorClass = localStorage.getItem('colorMode', 'theme-mode-light');
 
     dispatch(ThemeAction.setMode(themeClass));
 
@@ -40,6 +40,8 @@ const Layout = ({ props }) => {
               <Route path="/customers" element={<Customers />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/employees" element={<Employees />} />
+              <Route path="/discount" element={<Discount />} />
+              <Route path="/analytics" element={<Analytics />} />
             </Routes>
           </div>
         </div>
