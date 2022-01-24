@@ -1,0 +1,9 @@
+.line {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h4 {
+  margin-top: 25px;
+}
