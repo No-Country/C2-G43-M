@@ -1,18 +1,12 @@
 .dashboard {
   width: 800px;
-  margin-top: 10px;
-  margin-left: 4px;
-  margin-right: auto;
-  border-width: 4px;
   display: flex;
-  flex-direction: end;
   align-items: center;
   justify-content: center;
-  border-color: #0070f3;
-  border: 1px solid #eaeaea;
+  border: 2px solid var(--main-bg);
   border-radius: 2%;
   transition: color 0.15s ease, border-color 0.15s ease;
-  margin-bottom: 25px;
+
 }
 .dashboard:hover {
   border-radius: 30px;
@@ -40,4 +34,11 @@ a {
 
 .customers{
   background-color: var(--second-bg);
+}
+
+@media (max-width: 1000px) {
+  .dashboard {
+    margin-top: 20px;
+    width: 90vw !important;
+  }
 }

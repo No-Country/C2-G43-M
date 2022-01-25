@@ -50,7 +50,7 @@ function Crud() {
               <i className="bx bx-pencil"></i>
             </button>
             <button className={`crud__button-pencil`}>
-              <i class="bx bx-trash"></i>
+              <i className="bx bx-trash"></i>
             </button>
           </div>
           <label>Producto</label>
@@ -60,7 +60,7 @@ function Crud() {
               <i className="bx bx-pencil"></i>
             </button>
             <button className={`crud__button-pencil`}>
-              <i class="bx bx-trash"></i>
+              <i className="bx bx-trash"></i>
             </button>
           </div>
         </div>

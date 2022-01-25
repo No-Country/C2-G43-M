@@ -61,3 +61,8 @@
 .foruno{
   border: 1px solid var(--second-color);
 }
+@media (max-width: 1000px) {
+  .crud {
+    justify-content: center;
+  }
+}

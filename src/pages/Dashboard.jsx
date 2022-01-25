@@ -48,7 +48,7 @@ const Dashboard = () => {
               ))}
             </div>
           </div>
-          <div className="col-10 col-md-6 col-sm-12">
+          <div className="col-md-12	col-lg-6">
             <Crud />
           </div>
         </div>
