@@ -1,0 +1,26 @@
+* {
+  color: grey;
+}
+.search {
+  top: 6px;
+  left: 10px;
+}
+
+.form-control {
+  border: none;
+  padding-left: 32px;
+}
+
+.form-control:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.green {
+  color: green;
+}
+@media (max-width: 400px) {
+  .conatainer {
+    width: 400px;
+  }
+}

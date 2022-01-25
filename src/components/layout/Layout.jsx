@@ -14,6 +14,7 @@ import Employees from '../../pages/Employees';
 import Login from '../login/Login';
 import Analytics from '../../pages/Analytics';
 import Categories from '../../pages/Categories';
+import Orders from '../../pages/Orders';
 const Layout = ({ props }) => {
   const ThemeReducer = useSelector((state) => state.ThemeReducer);
 
@@ -44,6 +45,7 @@ const Layout = ({ props }) => {
               <Route path="/discount" element={<Discount />} />
               <Route path="/analytics" element={<Analytics />} />
               <Route path="/categories" element={<Categories />} />
+              <Route path="/orders" element={<Orders />} />
             </Routes>
           </div>
         </div>
