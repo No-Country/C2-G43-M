@@ -1,0 +1,15 @@
+.social-icons > a {
+  text-decoration: none;
+  margin-left: 15px;
+}
+h2 {
+  color: grey;
+}
+h3 {
+  text-align: center;
+}
+.person-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+}

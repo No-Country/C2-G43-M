@@ -13,6 +13,7 @@ import Customers from '../../pages/Customers';
 import Employees from '../../pages/Employees';
 import Login from '../login/Login';
 import Analytics from '../../pages/Analytics';
+import Categories from '../../pages/Categories';
 const Layout = ({ props }) => {
   const ThemeReducer = useSelector((state) => state.ThemeReducer);
 
@@ -42,6 +43,7 @@ const Layout = ({ props }) => {
               <Route path="/employees" element={<Employees />} />
               <Route path="/discount" element={<Discount />} />
               <Route path="/analytics" element={<Analytics />} />
+              <Route path="/categories" element={<Categories />} />
             </Routes>
           </div>
         </div>
