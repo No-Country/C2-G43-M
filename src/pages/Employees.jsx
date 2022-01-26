@@ -1,13 +1,13 @@
-import React from 'react';
-import {} from '../assets/css/employees.css';
-import Spin from 'react-reveal/Spin';
-import { FaLinkedin } from 'react-icons/fa';
+import React from "react";
+import {} from "../assets/css/employees.css";
+import Spin from "react-reveal/Spin";
+import { FaLinkedin } from "react-icons/fa";
 import {
   AiOutlineGithub,
   AiOutlineMail,
   AiOutlineYoutube,
-} from 'react-icons/ai';
-import { BsFolderSymlink } from 'react-icons/bs';
+} from "react-icons/ai";
+import { BsFolderSymlink } from "react-icons/bs";
 
 export default function Employees() {
   return (
@@ -16,7 +16,7 @@ export default function Employees() {
         <div className="row">
           <div className="col-md-12">
             <Spin>
-              <h2 className=" text-center my-2 mb-4">Colaboradores</h2>{' '}
+              <h2 className=" text-center my-2 mb-4">Colaboradores</h2>{" "}
             </Spin>
           </div>
           <div className="col-lg-3 col-md-4 col-sm-3">
@@ -25,9 +25,7 @@ export default function Employees() {
             d-flex
             justify-content-center
             align-items-center p-3 rounded-lg
-            flex-column
-            
-            "
+            flex-column"
             >
               <div className="person-img">
                 <img
@@ -102,7 +100,7 @@ export default function Employees() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {' '}
+                  {" "}
                   <FaLinkedin font-size="25px" />
                 </a>
                 <a
@@ -112,7 +110,7 @@ export default function Employees() {
                 >
                   <AiOutlineGithub font-size="25px" />
                 </a>
-                <a href="">
+                <a href="https://github.com/carop2580">
                   <AiOutlineMail font-size="25px" />
                 </a>
               </div>
@@ -146,7 +144,7 @@ export default function Employees() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {' '}
+                  {" "}
                   <FaLinkedin font-size="25px" />
                 </a>
                 <a
@@ -156,7 +154,7 @@ export default function Employees() {
                 >
                   <AiOutlineGithub font-size="25px" />
                 </a>
-                <a href="">
+                <a href="https://github.com/carop2580">
                   <AiOutlineMail font-size="25px" />
                 </a>
               </div>
@@ -190,7 +188,7 @@ export default function Employees() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {' '}
+                  {" "}
                   <FaLinkedin font-size="25px" />
                 </a>
                 <a
@@ -238,7 +236,7 @@ export default function Employees() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {' '}
+                  {" "}
                   <FaLinkedin font-size="25px" />
                 </a>
                 <a
