@@ -1,14 +1,15 @@
-import React from "react";
-import {} from "../assets/css/employees.css";
-import Spin from "react-reveal/Spin";
-import { FaLinkedin } from "react-icons/fa";
+import React from 'react';
+import {} from '../assets/css/employees.css';
+import Spin from 'react-reveal/Spin';
+import { FaLinkedin } from 'react-icons/fa';
 import {
   AiOutlineGithub,
   AiOutlineMail,
   AiOutlineYoutube,
-} from "react-icons/ai";
-import { BsFolderSymlink } from "react-icons/bs";
-
+} from 'react-icons/ai';
+import { BsFolderSymlink } from 'react-icons/bs';
+import caro from '../assets/images/caro.jpg';
+import horu from '../assets/images/horu.jpg';
 export default function Employees() {
   return (
     <div>
@@ -16,7 +17,7 @@ export default function Employees() {
         <div className="row">
           <div className="col-md-12">
             <Spin>
-              <h2 className=" text-center my-2 mb-4">Colaboradores</h2>{" "}
+              <h2 className=" text-center my-2 mb-4">Colaboradores</h2>{' '}
             </Spin>
           </div>
           <div className="col-lg-3 col-md-4 col-sm-3">
@@ -83,7 +84,7 @@ export default function Employees() {
             >
               <div className="person-img">
                 <img
-                  src="https://media-exp1.licdn.com/dms/image/C4D35AQFgr4B8dTO1Aw/profile-framedphoto-shrink_200_200/0/1616809508368?e=1643212800&v=beta&t=K3NeDXzzNEZOq94Mf1XoByyj2tkq7htMiaRkvm-OUT4"
+                  src={caro}
                   alt="img 1"
                   className="img-fluid rounded-circle"
                 />
@@ -100,7 +101,7 @@ export default function Employees() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {" "}
+                  {' '}
                   <FaLinkedin font-size="25px" />
                 </a>
                 <a
@@ -144,7 +145,7 @@ export default function Employees() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {" "}
+                  {' '}
                   <FaLinkedin font-size="25px" />
                 </a>
                 <a
@@ -188,7 +189,7 @@ export default function Employees() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {" "}
+                  {' '}
                   <FaLinkedin font-size="25px" />
                 </a>
                 <a
@@ -219,7 +220,7 @@ export default function Employees() {
             >
               <div className="person-img">
                 <img
-                  src="https://media-exp1.licdn.com/dms/image/sync/C4E27AQEzKYLX6YnufQ/articleshare-shrink_480/0/1642975443263?e=1643158800&v=beta&t=tSh7Fk0-j_ThXSbkR4yaWrOdk6dGdUkmR7qgY1MVN-o"
+                  src={horu}
                   alt="img 1"
                   className="img-fluid rounded-circle"
                 />
@@ -236,7 +237,7 @@ export default function Employees() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {" "}
+                  {' '}
                   <FaLinkedin font-size="25px" />
                 </a>
                 <a
