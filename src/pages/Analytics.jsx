@@ -1,22 +1,22 @@
-import { Chart } from 'react-google-charts';
-import Shake from 'react-reveal/Shake';
+import { Chart } from "react-google-charts";
+import Shake from "react-reveal/Shake";
 
-import {} from '../assets/css/analytics.css';
-import RubberBand from 'react-reveal/RubberBand';
-import BarChart from '../components/barchart/BarChart';
+import {} from "../assets/css/analytics.css";
+import RubberBand from "react-reveal/RubberBand";
+import BarChart from "../components/barchart/BarChart";
 
 export const data = [
-  ['Country', 'Ventas'],
-  ['Germany', 200],
-  ['United States', 300],
-  ['Brazil', 400],
-  ['Canada', 500],
-  ['France', 600],
-  ['RU', 500],
-  ['ARGENTINA', 250],
-  ['AUSTRALIA', 600],
-  ['NIGERIA', 700],
-  ['INDIA', 250],
+  ["Country", "Ventas"],
+  ["Germany", 200],
+  ["United States", 300],
+  ["Brazil", 400],
+  ["Canada", 500],
+  ["France", 600],
+  ["RU", 500],
+  ["ARGENTINA", 250],
+  ["AUSTRALIA", 600],
+  ["NIGERIA", 700],
+  ["INDIA", 250],
 ];
 
 export function Analytics() {
@@ -28,13 +28,13 @@ export function Analytics() {
       <Chart
         chartEvents={[
           {
-            eventName: 'select',
+            eventName: "select",
             callback: ({ chartWrapper }) => {
               const chart = chartWrapper.getChart();
               const selection = chart.getSelection();
               if (selection.length === 0) return;
               const region = data[selection[0].row + 1];
-              console.log('Selected : ' + region);
+              console.log("Selected : " + region);
             },
           },
         ]}

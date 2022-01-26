@@ -1,6 +1,7 @@
 .chart {
   justify-content: center;
   align-items: center;
+  background-color: var(--main-bg);
 }
 
 h4 {
