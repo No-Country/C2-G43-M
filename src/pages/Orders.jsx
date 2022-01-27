@@ -13,13 +13,13 @@ function Orders() {
             </span>{' '}
             <input
               className="form-control w-100"
-              placeholder="Search by order#, name..."
+              placeholder="Buscar por Nr#, nombre..."
             />{' '}
           </div>
           <div className="px-2">
             {' '}
             <span>
-              Filters <i className="fa fa-angle-down"></i>
+              Filtro <i className="fa fa-angle-down"></i>
             </span>{' '}
             <i className="fa fa-ellipsis-h ms-3"></i>{' '}
           </div>
@@ -35,19 +35,19 @@ function Orders() {
                   #
                 </th>
                 <th scope="col" width="18%">
-                  Date
+                  Fecha
                 </th>
                 <th scope="col" width="14%">
                   Status
                 </th>
                 <th scope="col" width="25%">
-                  Customer
+                  Cliente
                 </th>
                 <th scope="col" width="18%">
-                  Purchased
+                  Compra
                 </th>
                 <th scope="col" className="text-end" width="20%">
-                  <span>Revenue</span>
+                  <span>Precio</span>
                 </th>
               </tr>
             </thead>
@@ -61,7 +61,7 @@ function Orders() {
                 <td>
                   <FcPaid />
 
-                  <span className="ms-1">Paid</span>
+                  <span className="ms-1">Pagado</span>
                 </td>
                 <td>
                   <img
@@ -86,7 +86,7 @@ function Orders() {
                 <td>
                   <FcExpired />
                   <i className="fa fa-dot-circle-o text-danger"></i>
-                  <span className="ms-1">Failed</span>
+                  <span className="ms-1">Error</span>
                 </td>
                 <td>
                   <img
@@ -96,7 +96,7 @@ function Orders() {
                   />{' '}
                   Tomo arvis
                 </td>
-                <td>Altroz furry</td>
+                <td>Iphone X</td>
                 <td className="text-end">
                   <span className="fw-bolder">$0.19</span>{' '}
                   <i className="fa fa-ellipsis-h ms-2"></i>
@@ -111,7 +111,7 @@ function Orders() {
                 <td>
                   <FcPaid />
 
-                  <span className="ms-1">Paid</span>
+                  <span className="ms-1">Pagado</span>
                 </td>
                 <td>
                   <img
@@ -136,7 +136,7 @@ function Orders() {
                 <td>
                   <FcPaid />
 
-                  <span className="ms-1">Paid</span>
+                  <span className="ms-1">Pagado</span>
                 </td>
                 <td>
                   <img
@@ -161,7 +161,7 @@ function Orders() {
                 <td>
                   <FcPaid />
 
-                  <span className="ms-1">Paid</span>
+                  <span className="ms-1">Pagado</span>
                 </td>
                 <td>
                   <img
@@ -171,7 +171,7 @@ function Orders() {
                   />{' '}
                   Althan Travis
                 </td>
-                <td>Wirecard for figma</td>
+                <td>Suscripcion figma</td>
                 <td className="text-end">
                   <span className="fw-bolder">$0.99</span>{' '}
                   <i className="fa fa-ellipsis-h ms-2"></i>
@@ -186,7 +186,7 @@ function Orders() {
                 <td>
                   <FcPaid />
 
-                  <span className="ms-1">Paid</span>
+                  <span className="ms-1">Pagado</span>
                 </td>
                 <td>
                   <img
@@ -196,7 +196,7 @@ function Orders() {
                   />{' '}
                   Althan Travis
                 </td>
-                <td>Wirecard for figma</td>
+                <td>Suscripción figma</td>
                 <td className="text-end">
                   <span className="fw-bolder">$0.99</span>{' '}
                   <i className="fa fa-ellipsis-h ms-2"></i>
@@ -210,7 +210,7 @@ function Orders() {
                 <td>10 Oct, 21</td>
                 <td>
                   <FcExpired />
-                  <span className="ms-1">Failed</span>
+                  <span className="ms-1">Error</span>
                 </td>
                 <td>
                   <img
@@ -220,7 +220,7 @@ function Orders() {
                   />{' '}
                   Althan Travis
                 </td>
-                <td>Wirecard for figma</td>
+                <td>Suscripción figma</td>
                 <td className="text-end">
                   <span className="fw-bolder">$0.99</span>{' '}
                   <i className="fa fa-ellipsis-h ms-2"></i>
@@ -235,7 +235,7 @@ function Orders() {
                 <td>
                   <FcPaid />
 
-                  <span className="ms-1">Paid</span>
+                  <span className="ms-1">Pagado</span>
                 </td>
                 <td>
                   <img
@@ -245,7 +245,7 @@ function Orders() {
                   />{' '}
                   Althan Travis
                 </td>
-                <td>Wirecard for figma</td>
+                <td>Suscripción figma</td>
                 <td className="text-end">
                   <span className="fw-bolder">$0.99</span>{' '}
                   <i className="fa fa-ellipsis-h ms-2"></i>
@@ -259,7 +259,7 @@ function Orders() {
                 <td>19 Oct, 21</td>
                 <td>
                   <FcExpired />
-                  <span className="ms-1">Failed</span>
+                  <span className="ms-1">Error</span>
                 </td>
                 <td>
                   <img
@@ -269,7 +269,7 @@ function Orders() {
                   />{' '}
                   Althan Travis
                 </td>
-                <td>Wirecard for figma</td>
+                <td>Suscripción figma</td>
                 <td className="text-end">
                   <span className="fw-bolder">$0.99</span>{' '}
                   <i className="fa fa-ellipsis-h ms-2"></i>
