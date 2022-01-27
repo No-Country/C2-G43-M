@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./login.css";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -20,35 +21,35 @@ const Login = () => {
     dispatch(ThemeAction.setColor(colorClass));
   }, [dispatch]);
 
-  return (<>
-    <div className={`login-box ${ThemeReducer.mode} ${ThemeReducer.color}`}>
-      <h1>Bienvenido!</h1>
-      <h3 className="login-box--subtitle">Ingrese sus credenciales</h3>
-      <div className="textbox">
-        <i className="fas fa-user"></i>
-        <input type="text" placeholder="Nombre de usuario" />
-      </div>
-      <div className="textbox">
-        <i className="fas fa-lock"></i>
-        <input type="password" placeholder="Contraseña" />
-      </div>
+  return (
+    <>
+      <div className={`login-box ${ThemeReducer.mode} ${ThemeReducer.color}`}>
+        <h1>Bienvenido!</h1>
+        <h3 className="login-box--subtitle">Ingrese sus credenciales</h3>
+        <div className="textbox">
+          <i className="fas fa-user"></i>
+          <input type="text" placeholder="Nombre de usuario" />
+        </div>
+        <div className="textbox">
+          <i className="fas fa-lock"></i>
+          <input type="password" placeholder="Contraseña" />
+        </div>
 
-      <input
-        type="button"
-        className={`btnn ${ThemeReducer.mode} ${ThemeReducer.color}`}
-        value="Ingresar"
-      />
-    </div>
-    <div class="social-login">
-      <h3>Contacto</h3>
-      <div class="social-icons">
-        <a href="#" class="social-login__icon fab fa-instagram"></a>
-        <a href="#" class="social-login__icon fab fa-facebook"></a>
-        <a href="#" class="social-login__icon fab fa-twitter"></a>
+        <input
+          type="button"
+          className={`btnn ${ThemeReducer.mode} ${ThemeReducer.color}`}
+          value="Ingresar"
+        />
       </div>
-
-    </div>
-  </>
+      <div className="social-login">
+        <h3>Contacto</h3>
+        <div className="social-icons">
+          <Link to="./" className="social-login__icon fab fa-instagram"></Link>
+          <Link to="./" className="social-login__icon fab fa-facebook"></Link>
+          <Link to="./" className="social-login__icon fab fa-twitter"></Link>
+        </div>
+      </div>
+    </>
   );
 };
 
