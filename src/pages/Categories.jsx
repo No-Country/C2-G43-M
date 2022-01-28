@@ -1,7 +1,9 @@
-import React from 'react';
-import { BsPeople } from 'react-icons/bs';
-import { MdPointOfSale, MdOutlineInventory } from 'react-icons/md';
-import {} from '../assets/css/categories.css';
+import React from "react";
+import { BsPeople } from "react-icons/bs";
+import { MdPointOfSale, MdOutlineInventory } from "react-icons/md";
+import {} from "../assets/css/categories.css";
+import { Link } from "react-router-dom";
+
 function Categories() {
   return (
     <div>
@@ -10,7 +12,7 @@ function Categories() {
           <div className="row">
             <div className="section-head col-sm-12">
               <h4>
-                <span>Categorias </span>y más!
+                <span>Categorias </span> y más!
               </h4>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and type
@@ -19,9 +21,9 @@ function Categories() {
                 standard dummy text ever since the 1500s, when an unknown book.
               </p>
             </div>
-            <div className="col-lg-4 col-sm-6">
+            <Link to="../dashboard" className="col-lg-4 col-sm-6">
               <div className="item">
-                {' '}
+                {" "}
                 <span className="icon feature_box_col_one">
                   <i className="fa fa-globe"></i>
                 </span>
@@ -31,10 +33,10 @@ function Categories() {
                   una pestaña, para obtener mejor visualizacion
                 </p>
               </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
+            </Link>
+            <Link to="../customers" className="col-lg-4 col-sm-6">
               <div className="item">
-                {' '}
+                {" "}
                 <span className="icon feature_box_col_two">
                   {/*<i className="fa fa-anchor"></i>*/}
                   <BsPeople />
@@ -45,10 +47,10 @@ function Categories() {
                   correspondientes y una paginacion para mejor visualización.
                 </p>
               </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
+            </Link>
+            <Link to="../employees" className="col-lg-4 col-sm-6">
               <div className="item">
-                {' '}
+                {" "}
                 <span className="icon feature_box_col_three">
                   <i className="fa fa-hourglass-half"></i>
                 </span>
@@ -58,10 +60,10 @@ function Categories() {
                   contribuyentes de éste proyecto cada uno con su especialidad.
                 </p>
               </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
+            </Link>
+            <Link to="../analytics" className="col-lg-4 col-sm-6">
               <div className="item">
-                {' '}
+                {" "}
                 <span className="icon feature_box_col_four">
                   <i className="fa fa-database"></i>
                 </span>
@@ -71,10 +73,10 @@ function Categories() {
                   un grafico con multiples variables.
                 </p>
               </div>
-            </div>
-            <div className="col-lg-4 col-sm-6">
+            </Link>
+            <Link to="../orders" className="col-lg-4 col-sm-6">
               <div className="item">
-                {' '}
+                {" "}
                 <span className="icon feature_box_col_five">
                   {/*<i className="fa fa-upload"></i>*/}
                   <MdPointOfSale />
@@ -85,10 +87,10 @@ function Categories() {
                   con las promociones.
                 </p>
               </div>
-            </div>
+            </Link>
             <div className="col-lg-4 col-sm-6">
               <div className="item">
-                {' '}
+                {" "}
                 <span className="icon feature_box_col_six">
                   {/*<i className="fa fa-camera"></i>*/}
                   <MdOutlineInventory />

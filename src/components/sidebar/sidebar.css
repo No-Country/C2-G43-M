@@ -94,7 +94,6 @@ a:link {
   .sidebar:hover {
     min-width: 50px;
   }
-  
   .sidebar__item {
     display: none;
   }

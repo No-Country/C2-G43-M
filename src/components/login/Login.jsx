@@ -23,7 +23,7 @@ const Login = () => {
 
   return (
     <>
-      <div className={`login-box ${ThemeReducer.mode} ${ThemeReducer.color}`}>
+      <form className={`login-box ${ThemeReducer.mode} ${ThemeReducer.color}`}>
         <h1>Bienvenido!</h1>
         <h3 className="login-box--subtitle">Ingrese sus credenciales</h3>
         <div className="textbox">
@@ -32,7 +32,7 @@ const Login = () => {
         </div>
         <div className="textbox">
           <i className="fas fa-lock"></i>
-          <input type="password" placeholder="Contraseña" />
+          <input type="password" placeholder="Contraseña" autoComplete="on" />
         </div>
 
         <input
@@ -40,13 +40,18 @@ const Login = () => {
           className={`btnn ${ThemeReducer.mode} ${ThemeReducer.color}`}
           value="Ingresar"
         />
-      </div>
+      </form>
       <div className="social-login">
-        <h3>Contacto</h3>
-        <div className="social-icons">
-          <Link to="./" className="social-login__icon fab fa-instagram"></Link>
-          <Link to="./" className="social-login__icon fab fa-facebook"></Link>
-          <Link to="./" className="social-login__icon fab fa-twitter"></Link>
+        <div className="social__login-box">
+          <h3>Contacto</h3>
+          <div className="social-icons">
+            <Link
+              to="./"
+              className="social-login__icon fab fa-instagram"
+            ></Link>
+            <Link to="./" className="social-login__icon fab fa-facebook"></Link>
+            <Link to="./" className="social-login__icon fab fa-twitter"></Link>
+          </div>
         </div>
       </div>
     </>

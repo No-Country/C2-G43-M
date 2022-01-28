@@ -9,7 +9,7 @@
     overflow: hidden;
     z-index: 1;
     transition: color 0.5s ease 0s;
-    margin-bottom: 30px;
+    margin: 5px;
 }
 
 .status-card__icon {
@@ -59,9 +59,17 @@
     color: var(--txt-white);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     .status-card{
         flex-direction: column;
         min-width: 110px;
     }
+    .status-card__icon {
+        font-size: 2rem;
+    }
+    .status-card__info > h4 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
 }

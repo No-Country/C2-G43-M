@@ -60,3 +60,9 @@
 .mode-list__color.active > i {
     transform: scale(1);
 }
+
+.bx-palette:hover{
+    color: var(--main-color);
+    transition: 0.4s;
+    background-color: var(--box-shadow);
+}

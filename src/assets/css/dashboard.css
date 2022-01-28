@@ -34,11 +34,16 @@ a {
 
 .customers{
   background-color: var(--second-bg);
+  max-width: 100vw;
 }
 
 @media (max-width: 1000px) {
   .dashboard {
     margin-top: 20px;
     width: 90vw !important;
+  }
+  .customers{
+    font-size: 0.6rem;
+    max-width: 100vw;
   }
 }

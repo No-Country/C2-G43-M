@@ -6,6 +6,7 @@ import "./sidebar.css";
 
 import logo from "../../assets/images/logofintech.png";
 import menu from "../../assets/images/menu.png";
+
 import SidebarItem from "./SidebarItem";
 import sidebar_items from "../../assets/JsonData/sidebar_routes.json";
 
@@ -16,12 +17,16 @@ const Sidebar = (props) => {
 
   return (
     <div className="sidebar">
-    <div className="sidebar__logo">
-      <div className="sidebar__item-logo">
-        <i><img src={menu} alt="company logo" /></i>
-        <span><img src={logo} alt="company logo" /></span>
+      <div className="sidebar__logo">
+        <div className="sidebar__item-logo">
+          <i>
+            <img src={menu} alt="burger icon" />
+          </i>
+          <span>
+            <img src={logo} alt="company logo" />
+          </span>
+        </div>
       </div>
-    </div>
       {sidebar_items.map((item, index) => (
         <Link to={item.route} key={index}>
           <SidebarItem
