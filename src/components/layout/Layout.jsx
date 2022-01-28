@@ -47,7 +47,7 @@ const Layout = ({ props }) => {
               <Route path="/analytics" element={<Analytics />} />
               <Route path="/categories" element={<Categories />} />
               <Route path="/orders" element={<Orders />} />
-              <Route path="/Settings" element={<Settings />} />
+              <Route path="/settings" element={<Settings />} />
             </Routes>
           </div>
         </div>

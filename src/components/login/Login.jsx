@@ -32,7 +32,7 @@ const Login = () => {
         </div>
         <div className="textbox">
           <i className="fas fa-lock"></i>
-          <input type="password" placeholder="Contraseña" autoComplete="on" />
+          <input type="password" placeholder="Contraseña" />
         </div>
 
         <input
